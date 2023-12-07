@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>ES654</title>
+<title>ES335</title>
 <link>https://github.com/nipunbatra/ml2024/notebooks/index.html</link>
 <atom:link href="https://github.com/nipunbatra/ml2024/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
