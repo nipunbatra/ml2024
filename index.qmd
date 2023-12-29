@@ -2,6 +2,8 @@
 title: "ES 335 Machine Learning"
 ---
 
+### Please join the [Slack channel](https://join.slack.com/t/es3352024/shared_invite/zt-29orttgk0-4cd1TIO1X8K6S1oJQka5PA) for the course.
+
 ### Summary
 
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
@@ -9,7 +11,6 @@ title: "ES 335 Machine Learning"
 * Course Timings:
     * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
     * Tutorials: Friday: 1130 to 1 PM in 10/103
-* [Slack Invite](https://join.slack.com/t/es3352024/shared_invite/zt-29orttgk0-4cd1TIO1X8K6S1oJQka5PA)
 
 
 
