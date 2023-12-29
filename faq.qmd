@@ -8,6 +8,9 @@ title: "FAQ"
 - Is there a project component in the course?
     - Yes and No. We will have a project-like question in each of your assignments. This will be a more "structured" project in that sense and all students would have the same question. However, there is no separate project component in the course. We feel this will help you get a better understanding of the concepts covered in the course, and the added structure will help you get started with the project.
 
+- Can you give an example of the project question?
+    - Sure. We will build an activity classifier: walking, running, etc. Initially, we use publicly available datasets to build the classifier. We will then help you with collecting your data using your smartphone and build a classifier using your data. Those who want to go beyond the learning objectives, can deploy the classifier on your smartphone.
+
 ---
 
 #### Prerequisites
@@ -66,15 +69,6 @@ title: "FAQ"
     - Attendance is mentioned in the grading policy clearly.  
 
 ---
-
-
-#### Projects
-
-- Is there a project component in the course?
-    - No. There is no project component in the course. 
-
----
-
 
 
 
