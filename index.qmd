@@ -1,13 +1,15 @@
 ---
-title: "ES 654 Machine Learning"
+title: "ES 335 Machine Learning"
 ---
 
 ### Summary
 
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
-* Teaching Assistants: Zeel B Patel, Shriraj Sawant, Shrutimoy, Sarth Dubey, Hitarth Gandhi, Saagar Parikh, Eshan Gujarathi, Gautam Vashishta, Aadesh Desai
-* Course Timings: Tuesday, Thursday 330-450 PM IST in 1/101
-* [Slack Invite](https://join.slack.com/t/es654-2022/shared_invite/zt-1mgeh688j-Wynv7_s_0n2_FaSu7kbUWg)
+* Teaching Assistants: Rishiraj Adhikary, Ayush Shrivastava
+* Course Timings:
+    * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
+    * Tutorials: Friday: 1130 to 1 PM in 10/103
+* [Slack Invite](https://join.slack.com/t/es3352024/shared_invite/zt-29orttgk0-4cd1TIO1X8K6S1oJQka5PA)
 
 
 
