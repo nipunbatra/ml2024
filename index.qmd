@@ -4,7 +4,8 @@ title: "ES 335 Machine Learning"
 
 ### Please join the [Slack channel](https://join.slack.com/t/es3352024/shared_invite/zt-29orttgk0-4cd1TIO1X8K6S1oJQka5PA) for the course.
 
-### Summary
+::: {.callout-tip}
+## Summary
 
 * Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
 * Teaching Assistants: Rishiraj Adhikary, Ayush Shrivastava
@@ -12,6 +13,15 @@ title: "ES 335 Machine Learning"
     * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
     * Tutorials: Friday: 1130 to 1 PM in 10/103
 
+:::
+
+
+
+::: {.callout-tip}
+## Pre-requisite exam
+
+The [pre-requisite exam](exams/prereq.qmd) has to be submitted by 6th January 2024, 9 PM. Details on how to submit the exam are given in the exam itself. The exam is open book and open internet.
+:::
 
 
 ### Pre-requisites:

@@ -1,6 +1,6 @@
 ---
 title: "Prerequsite test"
-date: 2023-01-05
+date: 2023-12-30
 ---
 
 # Instructions
@@ -8,9 +8,9 @@ date: 2023-01-05
 
 1. This test is open book, open internet, open notes. You can use any resources you want to solve the problems.
 2. You should be typing your answers in a Jupyter notebook. 
-3. The submission would be a link to a public GitHub repository containing the notebook. Fill [this](https://forms.gle/xtZtBcD1ReVjT7M19) form to submit your solution. 
+3. The submission would be a link to a public GitHub repository containing the notebook. Fill [this](https://forms.gle/pmoypPdr7tPReQr29) form to submit your solution. 
 4. A random subset of students may have a viva post the exam. The viva would be based on the notebook and the solutions you have provided.
-5. The test is open till 6th January 2022 9 PM. You can submit your solutions anytime before that.
+5. The test is open till 6th January 2024 9 PM. You can submit your solutions anytime before that.
 6. This problem has to be solved individually. You cannot collaborate with anyone else.
 7. The code should be written using Python. 
 8. Some questions may require you to answer in text. You can use markdown cells to write your answers. Some questions may require you to write code. You can use code cells to write your code. Some questions may require you to write mathematical expressions. You can use LaTeX to write your expressions. You can write such LaTeX expressions in markdown cells.
