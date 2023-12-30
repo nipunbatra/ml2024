@@ -4,7 +4,11 @@ title: "Schedule"
 
 |Lecture #|Date|Topic|
 |:---:|:---:|:---|
-|1|3 Jan|Introduction and Logistics [[Slides](lectures/1-introduction.pdf)]|
+|0|30 Dec 2023| [Pre-requisite quiz released](exams/prereq.qmd)|
+|1|3 Jan|Introduction and Logistics|
+
+
+<!--
 |None| 4 Jan|[Pre-requisites quiz released](https://nipunbatra.github.io/ml2023/exams/prereq.html)|
 |2|5 Jan|Convention, Metrics, Classification, Regression [[Slides](lectures/accuracy.pdf)]|
 |3|10 Jan|Decision Trees - 1[[Slides](lectures/decision-tree-1.pdf)][[Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/tips.html)]|
@@ -37,4 +41,5 @@ title: "Schedule"
 |29| 25 Apr| [Support Vector Machines (Soft Margin)](lectures/svm-soft-margin.pdf)|
 
 
+-->
 
