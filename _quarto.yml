@@ -4,6 +4,7 @@ project:
 
 website:
   title: "ES335"
+  favicon: images/logo.jpeg
   navbar:
     right:
       - href: index.qmd

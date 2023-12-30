@@ -10,3 +10,9 @@ ds_store/
 .DS_Store
 runs/
 mnist-cnn/
+
+
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
