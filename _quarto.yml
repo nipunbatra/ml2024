@@ -6,6 +6,7 @@ website:
   title: "ES335"
   favicon: images/logo.jpeg
   navbar:
+    logo: images/logo.jpeg
     right:
       - href: index.qmd
         text: Home
