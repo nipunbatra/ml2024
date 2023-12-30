@@ -2,6 +2,9 @@
 title: "ES 335 Machine Learning"
 ---
 
+
+![](images/logo.jpeg)
+
 ### Please join the [Slack channel](https://join.slack.com/t/es3352024/shared_invite/zt-29orttgk0-4cd1TIO1X8K6S1oJQka5PA) for the course.
 
 ::: {.callout-tip}
