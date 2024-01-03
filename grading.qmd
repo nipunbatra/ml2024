@@ -11,7 +11,7 @@ title: "Grading Policy"
 
 - Assignments: 44%
     - 4 or 5 assignments
-    - Done in groups of 5 
+    - Done in groups of ~~5~~ **6** (preferred) or **7** [Changed from 5 to accomodate the larger class size] 
     - Atleast one question per assignment will be a project-like question
     - Variable weight (e.g. some assignments would be 10%, some 12%, etc.)
     - Some assignments would involve:
