@@ -2,10 +2,20 @@
 title: "Schedule"
 ---
 
-|Lecture #|Date|Topic|
-|:---:|:---:|:---|
-|0|30 Dec 2023| [Pre-requisite quiz released](exams/prereq.qmd)|
-|1|3 Jan|Introduction and Logistics|
+::: {.callout-tip}
+## Summary
+
+* [Lecture slides](https://nipunbatra.github.io/ml-teaching/slides.html)
+* [Lecture notebooks](https://nipunbatra.github.io/ml-teaching/notebooks.html)
+* [YouTube playlist containing recodings](https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF)
+
+:::
+
+
+| Lecture # |    Date     | Topic (Slides)                                  | Notebooks | YouTube Recording | Reading |
+| :-------: | :---------: | :---------------------------------------------- | :-------: | --------- | ------- |
+|     0     | 30 Dec 2023 | [Pre-requisite quiz released](exams/prereq.qmd) |           |           |         |
+|     1     |    3 Jan    | [Introduction and Logistics](https://nipunbatra.github.io/ml-teaching/slides/1-introduction-ml.pdf)                      |      [Transcription and local LLMs](https://nipunbatra.github.io/ml-teaching/notebooks/transcript.html), [Segmentation and Localization](https://nipunbatra.github.io/ml-teaching/notebooks/object-detection-segmentation.html), [Prompt to Image](https://nipunbatra.github.io/ml-teaching/notebooks/text_to_image.html)     |      [Recording](https://www.youtube.com/watch?v=XuDrvFmvk2U)     |         |
 
 
 <!--
