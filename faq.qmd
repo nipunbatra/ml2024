@@ -79,6 +79,10 @@ title: "FAQ"
 
 You are free to attend the lectures. However, given the limited number of TAs and the large number of students, we will not be able to grade your submissions. You can not formally contribute to any team in their assignments. 
 
+---
 
+#### Computational resources
+
+Typically, we have been kindly provided with Google Cloud credits. We will update this section once we have the credits. Once you get these credits, you can use them for your assignments. They are more than sufficient for the assignments. 
 
 
