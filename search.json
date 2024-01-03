@@ -4,7 +4,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Summary\n\n\n\n\nLecture slides\nLecture notebooks\nYouTube playlist containing recodings\n\n\n\n\n\n\nLecture #\nDate\nTopic (Slides)\nNotebooks\nYouTube Recording\nReading\n\n\n\n\n0\n30 Dec 2023\nPre-requisite quiz released\n\n\n\n\n\n1\n3 Jan\nIntroduction and Logistics\nTranscription and local LLMs, Segmentation and Localization, Prompt to Image\nRecording"
+    "text": "Summary\n\n\n\n\nGithub repo containing source code for lectures and notebooks\nPDF Lecture slides\nRendered Lecture notebooks\nYouTube playlist containing recodings\n\n\n\n\n\n\nLecture #\nDate\nTopic (Slides)\nNotebooks\nYouTube Recording\nReading\n\n\n\n\n0\n30 Dec 2023\nPre-requisite quiz released\n\n\n\n\n\n1\n3 Jan\nIntroduction and Logistics\nTranscription and local LLMs, Segmentation and Localization, Prompt to Image\nRecording\n\n\n\n2\n5 Jan\nConvention, Metrics, Classification, Regression"
   },
   {
     "objectID": "grading.html",
