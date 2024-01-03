@@ -18,6 +18,7 @@ title: "ES 335 Machine Learning"
     * Inderjeet Bhullar <inderjeet.bhullar@iitgn.ac.in>
     * Rahul Chembakasseril <rahul.chembakasseril@iitgn.ac.in>
     * R Yeeshu Dhurandhar <r.yeeshu@iitgn.ac.in>
+    * Suraj Jaiswal <jaiswalsuraj@iitgn.ac.in>
     * Kalash Kankaria <kalash.kankaria@iitgn.ac.in>,
     * Sukruta Midigeshi <sukruta.midigeshi@iitgn.ac.in>
     * Chirag Sarda <chirag.sarda@iitgn.ac.in>,
