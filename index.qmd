@@ -10,10 +10,20 @@ title: "ES 335 Machine Learning"
 ::: {.callout-tip}
 ## Summary
 
-* Instructor: Nipun Batra (nipun.batra@iitgn.ac.in)
-* Teaching Assistants: Rishiraj Adhikary, Ayush Shrivastava
+* Instructor: Nipun Batra <nipun.batra@iitgn.ac.in>
+    * Office: 13/401C
+    * [YouTube video](https://www.youtube.com/shorts/FmCbCkJQN1g) showing the directions to my office
+* Teaching Assistants: 
+    * Rishiraj Adhikary <rishiraj.a@iitgn.ac.in>
+    * Inderjeet Bhullar <inderjeet.bhullar@iitgn.ac.in>
+    * Rahul Chembakasseril <rahul.chembakasseril@iitgn.ac.in>
+    * R Yeeshu Dhurandhar <r.yeeshu@iitgn.ac.in>
+    * Kalash Kankaria <kalash.kankaria@iitgn.ac.in>,
+    * Sukruta Midigeshi <sukruta.midigeshi@iitgn.ac.in>
+    * Chirag Sarda <chirag.sarda@iitgn.ac.in>,
+    * Ayush Shrivastava <shrivastavaayush@iitgn.ac.in>
 * Course Timings:
-    * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 1/103
+    * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
     * Tutorials: Friday: 1130 to 1 PM in 10/103
 
 :::
