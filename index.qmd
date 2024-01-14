@@ -23,6 +23,7 @@ title: "ES 335 Machine Learning"
     * Sukruta Midigeshi <sukruta.midigeshi@iitgn.ac.in>
     * Chirag Sarda <chirag.sarda@iitgn.ac.in>,
     * Ayush Shrivastava <shrivastavaayush@iitgn.ac.in>
+    * Sai Krishna <avulasaikrishna@iitgn.ac.in>
 * Course Timings:
     * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
     * Tutorials: Friday: 1130 to 1 PM in 10/103
