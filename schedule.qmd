@@ -25,6 +25,7 @@ title: "Schedule"
 |7| 17 Jan| [Lecture on Random Forests](https://nipunbatra.github.io/ml-teaching/slides/ensemble.pdf)|, Tutorial on Random Forests + Meshgrid |[Video](https://www.youtube.com/watch?v=NDYiYk7vJTU)|[Notebook on Random Forests feature importance from scratch](https://nipunbatra.github.io/ml-teaching/notebooks/ensemble-feature-importance.html), [Notebook on meshgrid](https://nipunbatra.github.io/ml-teaching/notebooks/meshgrid.html)||
 |8| 19 Jan| [Linear Regression](https://nipunbatra.github.io/ml-teaching/slides/linear-regression.pdf)|[Recording](https://www.youtube.com/watch?v=3cAzgZOrC3U)|||
 |9| 24 Jan| [Linear Regression: Basis Functions](https://nipunbatra.github.io/ml-teaching/slides/linear-regression.pdf)|[Recording](https://www.youtube.com/watch?v=gkb9-xJfR08)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/basis.html)||
+|10| 25 Jan| [Linear Regression: Geometric Interpretation](https://nipunbatra.github.io/ml-teaching/slides/linear-regression.pdf)|[Recording](https://www.youtube.com/watch?v=SE0WhKNd8K8)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/geometric-linear-regression.html)||
 10|  | [Forecasting, Multi-colinearity, Dummy Variables, Geometric Interpretation of Least Squares Solution]| | | |
 11| | Gradient Descent | | | |
 
