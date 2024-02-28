@@ -36,6 +36,9 @@ title: "Schedule"
 17| 12 Feb| [Coordinate Descent](https://nipunbatra.github.io/ml-teaching/slides/lasso-regression.pdf) + [Time Complexity](https://nipunbatra.github.io/ml-teaching/slides/time_complexity.pdf) + [ML Maths](https://nipunbatra.github.io/ml-teaching/slides/ml-maths.pdf) + [Convexity](https://nipunbatra.github.io/ml-teaching/slides/convexity.pdf)| Not Recorded | [Notebook on Sklearn with GPU](https://nipunbatra.github.io/ml-teaching/notebooks/Sklearn_on_GPU.html)| |
 18| 14 Feb| [Mock Quiz](https://nipunbatra.github.io/ml-teaching/slides/mock-quiz.pdf)| | | |
 19| 16 Feb| Guest Lecture by [Arjun Bhagoji](https://arjunbhagoji.github.io/), [Adversarial Examples for ML](https://nipunbatra.github.io/ml-teaching/slides/guest-lecture.pdf)| |[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/guest-lecture/Student_copy_adv_examples_tutorial__Arjun_Bhagoji.html) | |
+20| 26 Feb| Mid sem exam discussion | | | |
+21| 28 Feb| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording](https://www.youtube.com/watch?v=vMlOUAys38Q)|[Notebook on why use logits](https://nipunbatra.github.io/ml-teaching/notebooks/logits-usage.html), [Notebook on Logistic regression in Torch](https://nipunbatra.github.io/ml-teaching/notebooks/logistic-regression-torch.html)| |
+22| 1 March| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording]()|[Notebook]()| |
 
 <!--
 |None| 4 Jan|[Pre-requisites quiz released](https://nipunbatra.github.io/ml2023/exams/prereq.html)|
