@@ -39,6 +39,23 @@ title: "Schedule"
 20| 26 Feb| Mid sem exam discussion | | | |
 21| 28 Feb| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording](https://www.youtube.com/watch?v=vMlOUAys38Q)|[Notebook on why use logits](https://nipunbatra.github.io/ml-teaching/notebooks/logits-usage.html), [Notebook on Logistic regression in Torch](https://nipunbatra.github.io/ml-teaching/notebooks/logistic-regression-torch.html)| |
 22| 1 March| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording]()|[Notebook]()| |
+23| 4 March| [MLP] |[Recording]()|[Notebook]()| |
+24| 6 March| [MLP], [Next token prediction] |[Recording]()|[Notebook]()| |
+25| 11 March| [Autograd] |[Recording]()|[Notebook]()| |
+26| 13 March| [CNN] |[Recording]()|[Notebook]()| |
+27| 18 March| [Naive Bayes]| [Recording]()|[Notebook]()| |
+28| 20 March| [KNN] |[Recording]()|[Notebook]()| |
+29| 1 April| [Unsupervised Learning - 1] |[Recording]()|[Notebook]()| |
+30|3 April | [Unsupervised Learning - 2] |[Recording]()|[Notebook]()| |
+31| 5 April| [Constrained Optimization] |[Recording]()|[Notebook]()| |
+32| 8 April| [SVM - 1] |[Recording]()|[Notebook]()| |
+33| 10 April| [SVM - 2] |[Recording]()|[Notebook]()| |
+34| 12 April| [SVM - 3] |[Recording]()|[Notebook]()| |
+35| 15 April| [RL - 1] |[Recording]()|[Notebook]()| |
+36| 17 April| [RL - 2] |[Recording]()|[Notebook]()| |
+37| 19 April| [Mock Quiz] |[Recording]()|[Notebook]()| |
+
+
 
 <!--
 |None| 4 Jan|[Pre-requisites quiz released](https://nipunbatra.github.io/ml2023/exams/prereq.html)|
