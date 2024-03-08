@@ -38,9 +38,12 @@ title: "Schedule"
 19| 16 Feb| Guest Lecture by [Arjun Bhagoji](https://arjunbhagoji.github.io/), [Adversarial Examples for ML](https://nipunbatra.github.io/ml-teaching/slides/guest-lecture.pdf)| |[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/guest-lecture/Student_copy_adv_examples_tutorial__Arjun_Bhagoji.html) | |
 20| 26 Feb| Mid sem exam discussion | | | |
 21| 28 Feb| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording](https://www.youtube.com/watch?v=vMlOUAys38Q)|[Notebook on why use logits](https://nipunbatra.github.io/ml-teaching/notebooks/logits-usage.html), [Notebook on Logistic regression in Torch](https://nipunbatra.github.io/ml-teaching/notebooks/logistic-regression-torch.html)| |
-22| 1 March| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording]()|[Notebook]()| |
-23| 4 March| [MLP] |[Recording]()|[Notebook]()| |
-24| 6 March| [MLP], [Next token prediction] |[Recording]()|[Notebook]()| |
+22| 1 March| [Logistic Regression](https://nipunbatra.github.io/ml-teaching/slides/logistic-1.pdf)|[Recording](https://www.youtube.com/watch?v=oD8EnYTYdpk)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/logistic-circular.html)| |
+23| 5 March| [MLP I](https://nipunbatra.github.io/ml-teaching/slides/mlp.pdf) |[Recording](https://www.youtube.com/watch?v=eWGDS4nvd_w)|| |
+24| 6 March| [MLP II](https://nipunbatra.github.io/ml-teaching/slides/mlp.pdf)|[Recording](https://www.youtube.com/watch?v=qPXJNgSYcXA)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/nn_vectorization_with_vmap_jaxtyping_and_beartype_zeel.html#vectorization-with-torch.vmap)| |
+25| 7 March | [Next token prediction](https://nipunbatra.github.io/ml-teaching/slides/next-token.pdf) |[Recording](https://www.youtube.com/watch?v=RTRuN0GgQo4&feature=youtu.be)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/names.html)| |
+26| 11 March| [Mock Quiz]| | | |
+
 25| 11 March| [Autograd] |[Recording]()|[Notebook]()| |
 26| 13 March| [CNN] |[Recording]()|[Notebook]()| |
 27| 18 March| [Naive Bayes]| [Recording]()|[Notebook]()| |
