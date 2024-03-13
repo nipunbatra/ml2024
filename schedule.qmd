@@ -43,9 +43,10 @@ title: "Schedule"
 24| 6 March| [MLP II](https://nipunbatra.github.io/ml-teaching/slides/mlp.pdf)|[Recording](https://www.youtube.com/watch?v=qPXJNgSYcXA)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/nn_vectorization_with_vmap_jaxtyping_and_beartype_zeel.html#vectorization-with-torch.vmap)| |
 25| 7 March| [Next token prediction](https://nipunbatra.github.io/ml-teaching/slides/next-token.pdf) |[Recording](https://www.youtube.com/watch?v=RTRuN0GgQo4&feature=youtu.be)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/names.html)| |
 26| 11 March| [Mock Quiz](https://nipunbatra.github.io/ml-teaching/slides/mock-quiz-2.pdf)| |[Solution](https://nipunbatra.github.io/ml-teaching/slides/mock-quiz-2-solution.pdf)| |
+27| 13 March| [Autograd](https://nipunbatra.github.io/ml-teaching/slides/autograd.pdf)|[Recording](https://www.youtube.com/watch?v=Qo3z51lBQ1k)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/autodiff.html)| |
+28| 18 March| [CNN] |[Recording]()|[Notebook]()| |
 
-25| 11 March| [Autograd] |[Recording]()|[Notebook]()| |
-26| 13 March| [CNN] |[Recording]()|[Notebook]()| |
+<!--
 27| 18 March| [Naive Bayes]| [Recording]()|[Notebook]()| |
 28| 20 March| [KNN] |[Recording]()|[Notebook]()| |
 29| 1 April| [Unsupervised Learning - 1] |[Recording]()|[Notebook]()| |
@@ -60,7 +61,7 @@ title: "Schedule"
 
 
 
-<!--
+
 |None| 4 Jan|[Pre-requisites quiz released](https://nipunbatra.github.io/ml2023/exams/prereq.html)|
 |2|5 Jan|Convention, Metrics, Classification, Regression [[Slides](lectures/accuracy.pdf)]|
 |3|10 Jan|Decision Trees - 1[[Slides](lectures/decision-tree-1.pdf)][[Notebook](https://nipunbatra.github.io/ml2023/notebooks/posts/tips.html)]|
