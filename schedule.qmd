@@ -44,8 +44,8 @@ title: "Schedule"
 25| 7 March| [Next token prediction](https://nipunbatra.github.io/ml-teaching/slides/next-token.pdf) |[Recording](https://www.youtube.com/watch?v=RTRuN0GgQo4&feature=youtu.be)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/names.html)| |
 26| 11 March| [Mock Quiz](https://nipunbatra.github.io/ml-teaching/slides/mock-quiz-2.pdf)| |[Solution](https://nipunbatra.github.io/ml-teaching/slides/mock-quiz-2-solution.pdf)| |
 27| 13 March| [Autograd](https://nipunbatra.github.io/ml-teaching/slides/autograd.pdf)|[Recording](https://www.youtube.com/watch?v=Qo3z51lBQ1k)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/autodiff.html)| |
-28| 18 March| [CNN - I] |[Recording]()|[Notebook]()| |
-29| 20 March| [CNN - II] |[Recording]()|[Notebook]()| |
+28| 18 March| [CNN - I] |[Recording](https://www.youtube.com/watch?v=CfC3hOYSTNc)|[Notebook]()| |
+29| 20 March| [CNN - II] |[Recording](https://www.youtube.com/watch?v=tZJwzURBinE)|[Notebook]()| |
 30| 22 March| [KNN] |[Recording]()|[Notebook (Parametric v/s Non-Parametric)](https://nipunbatra.github.io/ml2023/notebooks/posts/parametric-non-parametric.html), [Notebook (Curse of dimensionality)](https://nipunbatra.github.io/ml-teaching/notebooks/curse-dimensionality)| Reference on Parameteric v/s Non-Parametric [from MLSS](http://mlss.tuebingen.mpg.de/2015/slides/ghahramani/gp-neural-nets15.pdf), [ML Mastery](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/), [StackExchange](https://stats.stackexchange.com/questions/268638/what-exactly-is-the-difference-between-a-parametric-and-non-parametric-model), [Sebastian Raschka's blog](https://sebastianraschka.com/faq/docs/parametric_vs_nonparametric.html) |
 
 <!--
