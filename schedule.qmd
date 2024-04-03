@@ -47,6 +47,8 @@ title: "Schedule"
 28| 18 March| [CNN - I](https://nipunbatra.github.io/ml-teaching/slides/CNN.pdf), [1D CNN](https://nipunbatra.github.io/ml-teaching/slides/1d-cnn.pdf) |[Recording](https://www.youtube.com/watch?v=CfC3hOYSTNc)|[Notebook]()| |
 29| 20 March| [CNN - II] |[Recording](https://www.youtube.com/watch?v=tZJwzURBinE)|[Notebook]()| |
 30| 22 March| [KNN] |[Recording]()|[Notebook (Parametric v/s Non-Parametric)](https://nipunbatra.github.io/ml2023/notebooks/posts/parametric-non-parametric.html), [Notebook (Curse of dimensionality)](https://nipunbatra.github.io/ml-teaching/notebooks/curse-dimensionality)| Reference on Parameteric v/s Non-Parametric [from MLSS](http://mlss.tuebingen.mpg.de/2015/slides/ghahramani/gp-neural-nets15.pdf), [ML Mastery](https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/), [StackExchange](https://stats.stackexchange.com/questions/268638/what-exactly-is-the-difference-between-a-parametric-and-non-parametric-model), [Sebastian Raschka's blog](https://sebastianraschka.com/faq/docs/parametric_vs_nonparametric.html) |
+31| 1 April| [Reinforcement learning](https://nipunbatra.github.io/ml-teaching/slides/rl.pdf) |[Recording](https://www.youtube.com/watch?v=Gth666ecEYM)|[Notebook 1](), [Notebook 2]()| |
+32| 3 April| [Unsupervised learning](https://nipunbatra.github.io/ml-teaching/slides/unsupervised.pdf)|[Recording]()|[Notebook]()| |
 
 <!--
 27| 18 March| [Naive Bayes]| [Recording]()|[Notebook]()| |
