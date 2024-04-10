@@ -51,7 +51,7 @@ title: "Schedule"
 32| 3 April| [Unsupervised learning](https://nipunbatra.github.io/ml-teaching/slides/unsupervised.pdf)|[Recording](https://www.youtube.com/watch?v=Zoubg9Gvq40)|[Notebook]()| |
 33| 5 April| [Approximate KNN](https://nipunbatra.github.io/ml-teaching/slides/KNN-approx.pdf)| [Recording](https://www.youtube.com/watch?v=C9HQLyXwEw0)|[Notebook](https://nipunbatra.github.io/ml-teaching/notebooks/knn-variants.html)| |
 34| 8 April| [Constrained Optimization 1](https://nipunbatra.github.io/ml-teaching/slides/constrained-1.pdf), [Constrained Optimization 2 (self study)](https://nipunbatra.github.io/ml-teaching/slides/constrained-2.pdf)| |[Notebook]()| |
-35| 10 April| [SVM - I](https://nipunbatra.github.io/ml-teaching/slides/svm-intro.pdf)|[Recording]()|[Notebook]()| |
+35| 10 April| [SVM - I](https://nipunbatra.github.io/ml-teaching/slides/svm-intro.pdf)|[Recording](https://www.youtube.com/watch?v=GJ79bHF1P5I)|[Notebook 1](https://nipunbatra.github.io/ml-teaching/notebooks/svm.html)| |
 36| 12 April| [SVM - II](https://nipunbatra.github.io/ml-teaching/slides/svm-intro.pdf)|[Recording]()|[Notebook]()| |
 <!--
 27| 18 March| [Naive Bayes]| [Recording]()|[Notebook]()| |
