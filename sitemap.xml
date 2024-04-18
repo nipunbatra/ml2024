@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nipunbatra.github.io/ml2024/tentative.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
+    <loc>https://nipunbatra.github.io/ml2024/grading.html</loc>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
   </url>
   <url>
-    <loc>https://nipunbatra.github.io/ml2024/faq.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
+    <loc>https://nipunbatra.github.io/ml2024/tentative.html</loc>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
   </url>
   <url>
     <loc>https://nipunbatra.github.io/ml2024/quizzes.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
   </url>
   <url>
-    <loc>https://nipunbatra.github.io/ml2024/grading.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nipunbatra.github.io/ml2024/index.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nipunbatra.github.io/ml2024/schedule.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
+    <loc>https://nipunbatra.github.io/ml2024/faq.html</loc>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
   </url>
   <url>
     <loc>https://nipunbatra.github.io/ml2024/exams/prereq.html</loc>
-    <lastmod>2024-04-10T06:14:32.139Z</lastmod>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nipunbatra.github.io/ml2024/schedule.html</loc>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nipunbatra.github.io/ml2024/index.html</loc>
+    <lastmod>2024-04-18T05:14:06.299Z</lastmod>
   </url>
 </urlset>
