@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FAQ – ES335</title>
+<title>Questions – ES 335 · Machine Learning</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -24,40 +30,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6f4daa0acb84b33b6cf00c2f0c443f78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f1f85bb7dbd4314d5ad09add27c1e8f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6f4daa0acb84b33b6cf00c2f0c443f78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7ec72f452c5d4fd3a48841bf9c27c350.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -72,236 +56,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<script>
+// Light and dark: follow the system unless the switch has saved a choice. Runs before the page paints.
+(() => {
+  const root = document.documentElement, key = 'ml2024-theme';
+  const mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : { matches: false };
+  const get = () => { try { return localStorage.getItem(key); } catch { return null; } };
+  const set = v => { try { v ? localStorage.setItem(key, v) : localStorage.removeItem(key); } catch {} };
+  function apply() {
+    const t = get();
+    if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t); else root.removeAttribute('data-theme');
+    const dark = t === 'light' || t === 'dark' ? t === 'dark' : mq.matches;
+    root.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+    document.querySelectorAll('.mode').forEach(b => {
+      b.setAttribute('aria-checked', String(dark));
+      b.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      b.title = b.getAttribute('aria-label');
+    });
+    return dark;
+  }
+  apply();
+  if (mq.addEventListener) mq.addEventListener('change', apply);
+  window.addEventListener('storage', e => { if (e.key === key) apply(); });
+  document.addEventListener('DOMContentLoaded', () => {
+    apply();
+    document.querySelectorAll('.mode').forEach(b => b.addEventListener('click', () => {
+      const dark = b.getAttribute('aria-checked') !== 'true';
+      // A choice that matches the system clears the override, so the site keeps following the system.
+      set(dark === mq.matches ? null : (dark ? 'dark' : 'light'));
+      apply();
+    }));
+  });
+})();
+</script>
 
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="dl fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.jpeg" alt="" class="navbar-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ES335</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./grading.html"> 
-<span class="menu-text">Grading Policy</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./faq.html" aria-current="page"> 
-<span class="menu-text">FAQs</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./schedule.html"> 
-<span class="menu-text">Lectures (+Recordings)</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./tentative.html"> 
-<span class="menu-text">Tentative deadlines</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://nipunbatra.github.io"> 
-<span class="menu-text">Instructor Homepage</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<main class="content page-columns page-full" id="quarto-document-content">
+<aside class="rail">
+  <a class="code" href="./index.html" data-page="index.html">ES 335</a>
+  <span class="inst">IIT Gandhinagar</span>
+  <div class="appearance"><button type="button" class="mode" role="switch" aria-checked="false" aria-label="Switch to dark mode"><span class="sky"></span><span class="stars"><b style="left:9px;top:6px"></b><b style="left:15px;top:15px"></b><b style="left:5px;top:17px"></b></span><span class="knob"></span></button></div>
+  <nav aria-label="Course">
+    <a href="./index.html" data-page="index.html">Home</a>
+    <a href="./schedule.html" data-page="schedule.html">Lectures</a>
+    <a href="./assessment.html" data-page="assessment.html">Assessment</a>
+    <a href="./faq.html" data-page="faq.html">FAQ</a>
+    <a class="ext" href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF" target="_blank" rel="noopener noreferrer">Recordings</a>
+  </nav>
+</aside>
+<script>document.body.prepend(document.currentScript.previousElementSibling);</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FAQ</h1>
+<h1 class="title">Questions</h1>
 </div>
 
 
@@ -318,160 +139,301 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="projects" class="level4">
-<h4 class="anchored" data-anchor-id="projects">Projects</h4>
+<section id="projects" class="level2">
+<h2 data-anchor-id="projects">Projects</h2>
+<details class="q" id="is-there-a-project-component-in-the-course">
+<summary>
+Is there a project component in the course?
+</summary>
+<p>Yes and no. Each assignment has a project-like question. It is a more structured project in that sense, and all students get the same question. There is no separate project component: we feel this helps you understand the concepts covered in the course, and the added structure helps you get started.</p>
+</details>
+<details class="q" id="can-you-give-an-example-of-the-project-question">
+<summary>
+Can you give an example of a project question?
+</summary>
+<p>We build an activity classifier (walking, running and so on). First we use publicly available datasets to build the classifier. Then we help you collect your own data with your smartphone and build a classifier on it. If you want to go beyond the learning objectives, you can deploy the classifier on your smartphone.</p>
+</details>
+</section>
+<section id="prerequisites" class="level2">
+<h2 data-anchor-id="prerequisites">Prerequisites</h2>
+<details class="q" id="what-are-the-course-prerequisites">
+<summary>
+What are the course prerequisites?
+</summary>
+<p>Like all courses at IIT Gandhinagar, the course has no formal prerequisites. However, you are assumed to have a basic understanding of:</p>
 <ul>
-<li>Is there a project component in the course?
-<ul>
-<li>Yes and No.&nbsp;We will have a project-like question in each of your assignments. This will be a more “structured” project in that sense and all students would have the same question. However, there is no separate project component in the course. We feel this will help you get a better understanding of the concepts covered in the course, and the added structure will help you get started with the project.</li>
-</ul></li>
-<li>Can you give an example of the project question?
-<ul>
-<li>Sure. We will build an activity classifier: walking, running, etc. Initially, we use publicly available datasets to build the classifier. We will then help you with collecting your data using your smartphone and build a classifier using your data. Those who want to go beyond the learning objectives, can deploy the classifier on your smartphone.</li>
-</ul></li>
+<li>programming (Python) and data structures (ES 242 or equivalent);</li>
+<li>probability and statistics;</li>
+<li>linear algebra;</li>
+<li>calculus.</li>
 </ul>
-<hr>
+</details>
+<details class="q" id="what-is-the-prerequisite-test">
+<summary>
+What is the prerequisite test?
+</summary>
+<p>A <a href="./exams/prereq.html">test</a> designed to make sure you have the background needed to take the course.</p>
+</details>
+<details class="q" id="how-can-i-prepare-for-the-prerequisite-test">
+<summary>
+How can I prepare for the prerequisite test?
+</summary>
+<p>Your undergraduate course material should be sufficient. You may also use the preparation material listed under <a href="./index.html#references">References</a> on the home page.</p>
+</details>
+<details class="q" id="what-happens-if-i-do-not-clear-the-prerequisite-test">
+<summary>
+What happens if I do not clear the prerequisite test?
+</summary>
+<p>You will not be allowed to take the course.</p>
+</details>
+<details class="q" id="what-does-clear-the-test-mean">
+<summary>
+What does “clear” the test mean?
+</summary>
+<p>As in all courses at IIT Gandhinagar, the instructor decides the cut-off, and you have to score above it. The cut-off is not revealed to students in advance.</p>
+</details>
 </section>
-<section id="prerequisites" class="level4">
-<h4 class="anchored" data-anchor-id="prerequisites">Prerequisites</h4>
-<ul>
-<li>What are the course prerequisites?
-<ul>
-<li>The course has no “formal” prerequisites like all courses at IITGn. However, it is assumed that you have a basic understanding of:
-<ul>
-<li>programming (Python), and data structures (ES242 equivalent)</li>
-<li>probability and statistics</li>
-<li>linear algebra</li>
-<li>calculus</li>
-</ul></li>
-</ul></li>
-<li>What is the prerequisite exam?
-<ul>
-<li>This is an exam that we have designed to ensure that you have the necessary background to take the course.</li>
-</ul></li>
-<li>How can I prepare for the prerequisite exam?
-<ul>
-<li>Your UG course material should be sufficient to prepare for the exam.</li>
-<li>You may additionally refer to the “prerequisite” reading section on the <a href="./index.html">course homepage</a>.</li>
-</ul></li>
-<li>What happens if I do not clear the prerequisite exam?
-<ul>
-<li>You will not be allowed to take the course.</li>
-</ul></li>
-<li>What do you mean by “clear” the exam?
-<ul>
-<li>Like all courses at IITGn, the instructor will decide the cut-off for the exam. You will have to score above the cut-off to clear the exam. No cut-off will be revealed to the students apriori.</li>
-</ul></li>
-</ul>
-<hr>
+<section id="laptop-policy" class="level2">
+<h2 data-anchor-id="laptop-policy">Laptop policy</h2>
+<details class="q" id="can-i-use-my-laptop-in-class">
+<summary>
+Can I use my laptop in class?
+</summary>
+<p>No.&nbsp;You are not allowed to use your laptop in class for any reason.</p>
+</details>
 </section>
-<section id="laptop-policy" class="level4">
-<h4 class="anchored" data-anchor-id="laptop-policy">Laptop policy</h4>
-<ul>
-<li>Can I use my laptop in the class?
-<ul>
-<li>No.&nbsp;You are not allowed to use your laptop in the class for any reason.</li>
-</ul></li>
-</ul>
+<section id="quizzes" class="level2">
+<h2 data-anchor-id="quizzes">Quizzes</h2>
+<details class="q" id="what-happens-if-i-miss-a-quiz">
+<summary>
+What happens if I miss a quiz for any reason?
+</summary>
+<p>The quiz is marked zero. The best three of four quizzes count, a provision designed for such cases.</p>
+</details>
+<details class="q" id="are-the-quizzes-open-book">
+<summary>
+Are the quizzes and exams open book? Can I carry notes?
+</summary>
+<p>No.&nbsp;The exams and quizzes are closed book, and you may not carry notes.</p>
+</details>
+<details class="q" id="when-do-i-get-my-answer-sheets-back">
+<summary>
+How soon will I get my answer sheets back?
+</summary>
+<p>You should expect them back in four to five working days.</p>
+</details>
+<details class="q" id="is-there-a-mid-semester-or-end-semester-exam">
+<summary>
+Is there a mid-semester or end-semester exam?
+</summary>
+<p>Two of the four quizzes are held in the mid-semester and end-semester exam slots. The other two are held during the semester.</p>
+</details>
+<details class="q" id="are-the-quizzes-mcq-or-subjective">
+<summary>
+Are the quizzes multiple-choice or written?
+</summary>
+<p>They may contain both multiple-choice and written questions.</p>
+</details>
 </section>
-<section id="quizzes" class="level4">
-<h4 class="anchored">Quizzes</h4>
-<ul>
-<li>What happens if I miss a quiz due to any reason?
-<ul>
-<li>The quiz will be marked as 0.</li>
-<li>The provision of best 3 out of 4 quizzes is designed keeping in mind such scenarios.</li>
-</ul></li>
-<li>Will the quizzes and end-semester exam be open book? Will I be allowed to carry notes?
-<ul>
-<li>No, the exams and quizzes will be closed book. You are not permitted to carry notes.</li>
-</ul></li>
-<li>How soon can I expect to receive my answer sheets back?
-<ul>
-<li>You should expect to receive answer sheets back in 4-5 working days.</li>
-</ul></li>
-<li>Is there an end-semester exam or mid-semester exam?
-<ul>
-<li>2 out of the 4 quizzes will be held in the mid-semester and end-semester slots. The remaining two quizzes will be held during the semester.</li>
-</ul></li>
-<li>Will the quizzes be MCQs or subjective?
-<ul>
-<li><h2 id="the-quizzes-may-contain-both-the-mcqs-and-subjective-questions." class="anchored" data-anchor-id="quizzes">The quizzes may contain both the MCQs and subjective questions.</h2></li>
-</ul></li>
-</ul>
+<section id="assignments" class="level2">
+<h2 data-anchor-id="assignments">Assignments</h2>
+<details class="q" id="what-happens-if-i-miss-an-assignment">
+<summary>
+What happens if I miss an assignment for any reason?
+</summary>
+<p>There are no extensions for assignments.</p>
+</details>
+<details class="q" id="whom-should-i-ask-about-an-assignment">
+<summary>
+I have a doubt about an assignment. Whom should I write to?
+</summary>
+<p>Ask on the #assignments channel on Slack. If you do not get a response within two days, write to the instructor.</p>
+</details>
+<details class="q" id="can-i-use-another-language">
+<summary>
+I do not know Python. Can I write the assignments in another language?
+</summary>
+<p>No.&nbsp;You have to use Python.</p>
+</details>
+<details class="q" id="how-are-assignments-evaluated">
+<summary>
+How are assignments evaluated?
+</summary>
+<p>Each assignment is followed by a viva. The TAs first check the code against the submission: any change from the submitted code is not allowed, and any instance earns a warning. The TAs then run the code and ask a few questions, about 75% on the assignment itself and about 25% on the theory behind the concepts it covers.</p>
+<p>The marks are split as follows:</p>
+<ol type="1">
+<li>code runs correctly and solves the problem: 50%;</li>
+<li>questions on the assignment and your understanding of the code: 25%;</li>
+<li>code quality: 12.5%;</li>
+<li>questions on the theory behind the concepts covered: 12.5%.</li>
+</ol>
+</details>
+<details class="q" id="is-the-assignment-individual-or-group">
+<summary>
+Are assignments individual or in groups?
+</summary>
+<p>In groups. All team members get the same grade for the assignment.</p>
+</details>
 </section>
-<section id="assignments" class="level4">
-<h4 class="anchored" data-anchor-id="assignments">Assignments</h4>
-<ul>
-<li>What happens if I miss an assignment due to any reason?
-<ul>
-<li>There will no extensions for assignments.</li>
-</ul></li>
-<li>I have a doubt in the assignment. Whom should I write to?
-<ul>
-<li>Ask on the slack #assignments channel. If you don’t get a response within 2 days, write to the course instructor.</li>
-</ul></li>
-<li>I do not know Python. Can I code assignments in some other language?
-<ul>
-<li>Unfortunately, no. You have to stick to Python.</li>
-</ul></li>
-<li>How will you evaluate the assignment?
-<ul>
-<li>The assignments would be followed by a viva. The TAs would first check the code and compare against the submission. Any change from the submitted code is not allowed and any instance of the same would culminate in a warning. The TAs would run the code and ask a few questions. About 75% of these questions would be based on the assignment in question and about 25% would be based on the theory behind the concepts covered in the assignment.</li>
-<li>The grade breakup would be: i) code runs correctly and solves the problem [50% marks]; ii) questions based on the assignment and student understanding of code [25% marks]; iii) code quality [12.5% marks]; iv) questions based on the theory behind the concepts covered in the assignments [12.5% marks]</li>
-</ul></li>
-<li>Is the assignment individual or group?
-<ul>
-<li>The assignment is group. In case of group, all team members get the same grade for the assignment.</li>
-</ul></li>
-</ul>
-<hr>
+<section id="attendance" class="level2">
+<h2 data-anchor-id="attendance">Attendance</h2>
+<details class="q" id="what-is-the-attendance-policy">
+<summary>
+What is the attendance policy?
+</summary>
+<p>Attendance counts for 8% of the grade; see <a href="./assessment.html#attendance">Attendance</a> for how marks depend on the number of absences.</p>
+</details>
 </section>
-<section id="attendance" class="level4">
-<h4 class="anchored" data-anchor-id="attendance">Attendance</h4>
-<ul>
-<li>Attendance policy
-<ul>
-<li>Attendance is mentioned in the grading policy clearly.</li>
-</ul></li>
-</ul>
-<hr>
+<section id="auditing" class="level2">
+<h2 data-anchor-id="auditing">Auditing</h2>
+<details class="q" id="can-i-audit-the-course">
+<summary>
+Can I audit the course?
+</summary>
+<p>You are free to attend the lectures. However, with a limited number of TAs and a large number of students, we cannot grade your submissions, and you cannot formally contribute to any team’s assignments.</p>
+</details>
 </section>
-<section id="audit-policy" class="level4">
-<h4 class="anchored" data-anchor-id="audit-policy">Audit policy</h4>
-<p>You are free to attend the lectures. However, given the limited number of TAs and the large number of students, we will not be able to grade your submissions. You can not formally contribute to any team in their assignments.</p>
-<hr>
-</section>
-<section id="computational-resources" class="level4">
-<h4 class="anchored" data-anchor-id="computational-resources">Computational resources</h4>
-<p>Typically, we have been kindly provided with Google Cloud credits. We will update this section once we have the credits. Once you get these credits, you can use them for your assignments. They are more than sufficient for the assignments.</p>
+<section id="computational-resources" class="level2">
+<h2 data-anchor-id="computational-resources">Computational resources</h2>
+<details class="q" id="what-computational-resources-are-available">
+<summary>
+What computational resources are available?
+</summary>
+<p>Typically, the course has been kindly provided with Google Cloud credits, and this section is updated once the credits arrive. The credits can be used for your assignments and are more than sufficient for them.</p>
+</details>
 
 
 </section>
 
 </main> <!-- /main -->
+<footer class="foot">
+  <span>Prof. Nipun Batra · IIT Gandhinagar · Semester II, 2023–24</span>
+  <span><a href="https://nipunbatra.github.io/ml-teaching/">Course materials</a> · <a href="https://nipunbatra.github.io/teaching.html">All courses</a> · <a href="https://nipunbatra.github.io">nipunbatra.github.io</a></span>
+</footer>
+<script>document.body.append(document.currentScript.previousElementSibling);</script>
+<script>
+(() => {
+  // Mark the current page in the rail. Quarto writes the rail links relative to this page.
+  const home = document.querySelector('.rail a.code');
+  const root = home ? new URL(home.getAttribute('href'), location.href).pathname.replace(/[^/]*$/, '') : '/';
+  let rel = location.pathname.startsWith(root) ? location.pathname.slice(root.length) : '';
+  if (rel === '' || rel.endsWith('/')) rel += 'index.html';
+  else if (!/\.[a-z]+$/i.test(rel)) rel += '.html';
+  // A data-page ending in "/" marks a whole folder (for example Assignments/).
+  document.querySelectorAll('.rail nav a[data-page]').forEach(a => {
+    const p = a.dataset.page;
+    if (p.endsWith('/') ? rel.startsWith(p) : rel === p) a.setAttribute('aria-current', 'page');
+  });
+
+  // Copy-link buttons on section headings, lectures and assignment questions.
+  const LINK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"/></svg>';
+  document.querySelectorAll('main.content :is(h2, h3, h4)').forEach(h => {
+    if (h.closest('.next, .quarto-title-block, .callout, details') || h.querySelector('.anchor')) return;
+    const row = h.closest('tr[id]');
+    const sec = h.parentElement.tagName === 'SECTION' ? h.parentElement : h.closest('.mod');
+    const target = row || (sec && sec.id ? sec : null) || (h.id ? h : null);
+    if (!target) return;
+    const id = target.id;
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'anchor';
+    b.title = 'Copy link';
+    b.setAttribute('aria-label', 'Copy link to ' + (row ? 'lecture ' + id.replace('lecture-', '') : h.textContent.trim()));
+    b.innerHTML = LINK + '<span class="done">Copied</span>';
+    b.addEventListener('click', () => {
+      const url = location.origin + location.pathname + '#' + id;
+      history.replaceState(null, '', '#' + id);
+      const done = () => { b.classList.add('copied'); setTimeout(() => b.classList.remove('copied'), 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => {});
+    });
+    h.append(b);
+  });
+
+  // Contain wide tables in assignments and policies.
+  document.querySelectorAll('main.content table:not(.lt):not(.t)').forEach(table => {
+    if (table.parentElement.classList.contains('course-table-scroll')) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'course-table-scroll';
+    wrapper.setAttribute('role', 'region');
+    wrapper.setAttribute('aria-label', 'Scrollable table');
+    wrapper.tabIndex = 0;
+    table.before(wrapper);
+    wrapper.append(table);
+    if (table.rows[0]?.cells.length <= 2) table.classList.add('course-table-compact');
+  });
+
+  // Dates: read the table in _dates.qmd ("08 Oct 26" or "08 Oct 26, 6:30 pm", IST), grey out the past,
+  // draw a Today line on Assessment and list what is coming up on Home.
+  const MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  const IST = 330 * 60000, DAY = 864e5;
+  const istDay = t => Math.floor((t + IST) / DAY);
+  const now = Date.now(), today = istDay(now);
+  const START = Date.UTC(2024, 0, 1) / DAY; // Monday of the first teaching week
+  function parse(text) {
+    const m = text.match(/(\d{1,2}) ([A-Z][a-z]{2}) (\d{2})(?:,\s*(\d{1,2}):(\d{2})\s*(am|pm))?/i);
+    if (!m) return null;
+    const [, d, mon, y, hh, mm, ap] = m;
+    const day = Date.UTC(2000 + +y, MONTHS[mon], +d) / DAY;
+    let end;
+    if (hh) end = Date.UTC(2000 + +y, MONTHS[mon], +d, (+hh % 12) + (ap.toLowerCase() === 'pm' ? 12 : 0), +mm) - IST;
+    else end = (day + 1) * DAY - IST - 1;
+    return { day, end, time: hh ? `${hh}:${mm} ${ap}` : '' };
+  }
+  const fmt = (day, opts) => new Date(day * DAY).toLocaleDateString('en-GB', Object.assign({ timeZone: 'UTC' }, opts));
+  document.querySelectorAll('.dates table').forEach(table => {
+    table.classList.add('t');
+    const rows = [...table.tBodies[0].rows].map(tr => ({ tr, when: parse(tr.cells[0].textContent) })).filter(r => r.when);
+    const box = table.closest('.next');
+    if (box) {
+      // Home: the next four dates, grouped by day.
+      const groups = [];
+      rows.filter(r => r.when.end >= now).forEach(r => {
+        const g = groups.find(x => x.day === r.when.day);
+        if (g) g.rows.push(r); else groups.push({ day: r.when.day, time: r.when.time, rows: [r] });
+      });
+      const ol = document.createElement('ol');
+      groups.slice(0, 4).forEach(g => {
+        const left = g.day - today;
+        const li = document.createElement('li');
+        if (left <= 3) li.className = 'hot';
+        const rel = left === 0 ? 'today' : left === 1 ? 'tomorrow' : `in ${left} days`;
+        li.innerHTML = `<span class="d">${fmt(g.day, { day: '2-digit', month: 'short' })}<small>${fmt(g.day, { weekday: 'short' })}${g.time ? ' ' + g.time : ''}<br>${rel}</small></span><span></span>`;
+        g.rows.forEach((r, i) => {
+          if (i) li.lastChild.append(document.createElement('br'));
+          const cell = r.tr.cells[1].cloneNode(true);
+          li.lastChild.append(...cell.childNodes);
+        });
+        ol.append(li);
+      });
+      if (!groups.length) ol.innerHTML = '<li><span></span><span>No more dates this semester.</span></li>';
+      table.closest('.dates').replaceWith(ol);
+      return;
+    }
+    // Assessment: grey out the past, mark this week, and draw the Today line.
+    let placed = false;
+    rows.forEach(({ tr, when }) => {
+      const past = when.end < now;
+      tr.classList.toggle('past', past);
+      const tag = document.createElement('td');
+      tag.className = 'tag';
+      if (!past && when.day - today <= 7) tag.innerHTML = '<span class="pill now">This week</span>';
+      tr.append(tag);
+      if (!past && !placed) {
+        placed = true;
+        const t = document.createElement('tr');
+        t.className = 'today';
+        const week = Math.floor((today - START) / 7) + 1;
+        t.innerHTML = `<td>Today, ${fmt(today, { day: '2-digit', month: 'short' })}</td><td colspan="2">${week >= 1 && week <= 17 ? 'Week ' + week : ''}</td>`;
+        tr.before(t);
+      }
+    });
+    const head = table.tHead?.rows[0];
+    if (head) head.append(document.createElement('th'));
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -514,13 +476,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -549,6 +512,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

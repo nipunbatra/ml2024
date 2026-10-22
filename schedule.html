@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Schedule – ES335</title>
+<title>Lectures – ES 335 · Machine Learning</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -24,40 +30,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./favicon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/logo.jpeg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c3c2c9e745155556954bc4da23476b10.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6f4daa0acb84b33b6cf00c2f0c443f78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f1f85bb7dbd4314d5ad09add27c1e8f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6f4daa0acb84b33b6cf00c2f0c443f78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7ec72f452c5d4fd3a48841bf9c27c350.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -72,236 +56,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet">
+<script>
+// Light and dark: follow the system unless the switch has saved a choice. Runs before the page paints.
+(() => {
+  const root = document.documentElement, key = 'ml2024-theme';
+  const mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : { matches: false };
+  const get = () => { try { return localStorage.getItem(key); } catch { return null; } };
+  const set = v => { try { v ? localStorage.setItem(key, v) : localStorage.removeItem(key); } catch {} };
+  function apply() {
+    const t = get();
+    if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t); else root.removeAttribute('data-theme');
+    const dark = t === 'light' || t === 'dark' ? t === 'dark' : mq.matches;
+    root.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+    document.querySelectorAll('.mode').forEach(b => {
+      b.setAttribute('aria-checked', String(dark));
+      b.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      b.title = b.getAttribute('aria-label');
+    });
+    return dark;
+  }
+  apply();
+  if (mq.addEventListener) mq.addEventListener('change', apply);
+  window.addEventListener('storage', e => { if (e.key === key) apply(); });
+  document.addEventListener('DOMContentLoaded', () => {
+    apply();
+    document.querySelectorAll('.mode').forEach(b => b.addEventListener('click', () => {
+      const dark = b.getAttribute('aria-checked') !== 'true';
+      // A choice that matches the system clears the override, so the site keeps following the system.
+      set(dark === mq.matches ? null : (dark ? 'dark' : 'light'));
+      apply();
+    }));
+  });
+})();
+</script>
 
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="dl wide fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.jpeg" alt="" class="navbar-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ES335</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./grading.html"> 
-<span class="menu-text">Grading Policy</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./faq.html"> 
-<span class="menu-text">FAQs</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./schedule.html" aria-current="page"> 
-<span class="menu-text">Lectures (+Recordings)</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./tentative.html"> 
-<span class="menu-text">Tentative deadlines</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://nipunbatra.github.io"> 
-<span class="menu-text">Instructor Homepage</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<main class="content page-columns page-full" id="quarto-document-content">
+<aside class="rail">
+  <a class="code" href="./index.html" data-page="index.html">ES 335</a>
+  <span class="inst">IIT Gandhinagar</span>
+  <div class="appearance"><button type="button" class="mode" role="switch" aria-checked="false" aria-label="Switch to dark mode"><span class="sky"></span><span class="stars"><b style="left:9px;top:6px"></b><b style="left:15px;top:15px"></b><b style="left:5px;top:17px"></b></span><span class="knob"></span></button></div>
+  <nav aria-label="Course">
+    <a href="./index.html" data-page="index.html">Home</a>
+    <a href="./schedule.html" data-page="schedule.html">Lectures</a>
+    <a href="./assessment.html" data-page="assessment.html">Assessment</a>
+    <a href="./faq.html" data-page="faq.html">FAQ</a>
+    <a class="ext" href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF" target="_blank" rel="noopener noreferrer">Recordings</a>
+  </nav>
+</aside>
+<script>document.body.prepend(document.currentScript.previousElementSibling);</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schedule</h1>
+<h1 class="title">Lectures</h1>
 </div>
 
 
@@ -318,392 +139,242 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<!-- Generated in the dl-2026 format: one <tr id="lecture-N"> per lecture, resources grouped as reading (mats), videos (vids) and practice (prac). Copy an existing link to add one. -->
+<p class="lede">Each lecture lists its slides and reading first, then its full class recording, then practice notebooks. Slides and notebooks come from <a href="https://github.com/nipunbatra/ml-teaching">ml-teaching</a>, which also lists <a href="https://nipunbatra.github.io/ml-teaching/slides.html">all slides</a> and <a href="https://nipunbatra.github.io/ml-teaching/notebooks.html">all notebooks</a>.</p>
+<div class="key" aria-label="Key to resource icons"><span><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg>Slides</span><span><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Full recording</span><span><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg>Notebook</span><span><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg>Reading</span></div>
+<nav class="jump" aria-label="Modules"><a href="#foundations">Foundations<span class="num">1–2</span></a><a href="#trees-model-fit-and-ensembles">Trees, model fit and ensembles<span class="num">3–7</span></a><a href="#linear-models-and-optimisation">Linear models and optimisation<span class="num">8–17</span></a><a href="#classification-and-neural-networks">Classification and neural networks<span class="num">18–26</span></a><a href="#neighbours-unsupervised-and-reinforcement-learning">Neighbours, unsupervised and reinforcement learning<span class="num">27–30</span></a><a href="#support-vector-machines">Support vector machines<span class="num">31–35</span></a></nav>
+<div class="playlists"><a class="btn ib" href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF" target="_blank" rel="noopener noreferrer"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg>Lecture recordings playlist</a></div>
+<div class="lectures">
+<section class="mod" id="foundations" aria-labelledby="foundations-title"><div class="mod-h"><h2 id="foundations-title">Foundations</h2><span class="r">Lectures 1–2</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="prerequisite-test"><td class="no"><span aria-hidden="true">·</span></td><td class="topic"><h3 id="prerequisite-test-title">Prerequisite test</h3><p class="sub">An open-book test on Python, linear algebra, probability and calculus, required to take the course.</p></td>
+<td class="res"><div class="rl prac"><a class="r r-link" href="exams/prereq.html" aria-label="Prerequisite test, lecture 0"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Prerequisite test</span></a></div></td></tr>
+<tr id="lecture-1"><td class="no"><span class="visually-hidden">Lecture </span>01</td><td class="topic"><h3 id="lecture-1-title">Introduction and logistics</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/basics/slides/1-introduction-ml.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 1"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=XuDrvFmvk2U" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 1"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/transcript.html" target="_blank" rel="noopener noreferrer" aria-label="Transcription and local LLMs, lecture 1"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Transcription and local LLMs</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/object-detection-segmentation.html" target="_blank" rel="noopener noreferrer" aria-label="Segmentation and localisation, lecture 1"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Segmentation and localisation</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/text_to_image.html" target="_blank" rel="noopener noreferrer" aria-label="Prompt to image, lecture 1"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Prompt to image</span></a></div></td></tr>
+<tr id="lecture-2"><td class="no"><span class="visually-hidden">Lecture </span>02</td><td class="topic"><h3 id="lecture-2-title">Conventions, metrics, classification and regression</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/basics/slides/accuracy_convention.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 2"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=WUfduFsodE0" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 2"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/rule-based-vs-ml.html" target="_blank" rel="noopener noreferrer" aria-label="Rule-based vs ML, lecture 2"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Rule-based vs ML</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/confusion-mnist.html" target="_blank" rel="noopener noreferrer" aria-label="Confusion matrix, lecture 2"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Confusion matrix</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/dummy-baselines.html" target="_blank" rel="noopener noreferrer" aria-label="Dummy baselines, lecture 2"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Dummy baselines</span></a></div></td></tr>
+</tbody></table></section>
+
+<section class="mod" id="trees-model-fit-and-ensembles" aria-labelledby="trees-model-fit-and-ensembles-title"><div class="mod-h"><h2 id="trees-model-fit-and-ensembles-title">Trees, model fit and ensembles</h2><span class="r">Lectures 3–7</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="lecture-3"><td class="no"><span class="visually-hidden">Lecture </span>03</td><td class="topic"><h3 id="lecture-3-title">Decision trees I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/decision-trees.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 3"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=Bc6p3Yxgo7c" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 3"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/entropy.html" target="_blank" rel="noopener noreferrer" aria-label="Entropy, lecture 3"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Entropy</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-output.html" target="_blank" rel="noopener noreferrer" aria-label="Decision trees: real output, lecture 3"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Decision trees: real output</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-input-discrete-output.html" target="_blank" rel="noopener noreferrer" aria-label="Decision trees: real input, discrete output, lecture 3"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Decision trees: real input, discrete output</span></a></div></td></tr>
+<tr id="lecture-4"><td class="no"><span class="visually-hidden">Lecture </span>04</td><td class="topic"><h3 id="lecture-4-title">Decision trees II, bias and variance</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/bias-variance.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 4"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=zqNj-B78i_0" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 4"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/bias-variance.html" target="_blank" rel="noopener noreferrer" aria-label="Bias and variance, lecture 4"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Bias and variance</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-input-real-output.html" target="_blank" rel="noopener noreferrer" aria-label="Decision trees: overfitting and underfitting, lecture 4"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Decision trees: overfitting and underfitting</span></a></div></td></tr>
+<tr id="lecture-5"><td class="no"><span class="visually-hidden">Lecture </span>05</td><td class="topic"><h3 id="lecture-5-title">Tutorial on NumPy, pandas and classes; cross-validation</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/cross-validation.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Cross-validation, lecture 5"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Cross-validation</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=P980btm9C3c" target="_blank" rel="noopener noreferrer" aria-label="Tutorial recording, lecture 5"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Tutorial recording</span></a><a class="r r-recording" href="https://www.youtube.com/watch?v=GP4XW8wzPM8" target="_blank" rel="noopener noreferrer" aria-label="Lecture on cross-validation, lecture 5"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Lecture on cross-validation</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/numpy-pandas-basics.html" target="_blank" rel="noopener noreferrer" aria-label="NumPy, pandas, entropy, lecture 5"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">NumPy, pandas, entropy</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/classes-trees.html" target="_blank" rel="noopener noreferrer" aria-label="Classes and trees, lecture 5"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Classes and trees</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/hyperparams-experiments.html" target="_blank" rel="noopener noreferrer" aria-label="Cross-validation and tuning hyperparameters, lecture 5"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Cross-validation and tuning hyperparameters</span></a></div></td></tr>
+<tr id="lecture-6"><td class="no"><span class="visually-hidden">Lecture </span>06</td><td class="topic"><h3 id="lecture-6-title">Cross-validation and ensemble methods</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ensemble.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Ensemble methods, lecture 6"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Ensemble methods</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=FrNR-1cfpHc" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 6"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/hyperparams-experiments.html" target="_blank" rel="noopener noreferrer" aria-label="Cross-validation and tuning hyperparameters, lecture 6"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Cross-validation and tuning hyperparameters</span></a></div></td></tr>
+<tr id="lecture-7"><td class="no"><span class="visually-hidden">Lecture </span>07</td><td class="topic"><h3 id="lecture-7-title">Random forests</h3><p class="sub">Lecture on random forests, and a tutorial on random forests and meshgrid.</p></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ensemble.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 7"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=NDYiYk7vJTU" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 7"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/ensemble-feature-importance.html" target="_blank" rel="noopener noreferrer" aria-label="Random forest feature importance from scratch, lecture 7"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Random forest feature importance from scratch</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/meshgrid.html" target="_blank" rel="noopener noreferrer" aria-label="Meshgrid, lecture 7"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Meshgrid</span></a></div></td></tr>
+</tbody></table></section>
+
+<section class="mod" id="linear-models-and-optimisation" aria-labelledby="linear-models-and-optimisation-title"><div class="mod-h"><h2 id="linear-models-and-optimisation-title">Linear models and optimisation</h2><span class="r">Lectures 8–17</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="lecture-8"><td class="no"><span class="visually-hidden">Lecture </span>08</td><td class="topic"><h3 id="lecture-8-title">Linear regression</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 8"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=3cAzgZOrC3U" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 8"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div></td></tr>
+<tr id="lecture-9"><td class="no"><span class="visually-hidden">Lecture </span>09</td><td class="topic"><h3 id="lecture-9-title">Linear regression: basis functions</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 9"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=gkb9-xJfR08" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 9"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/basis.html" target="_blank" rel="noopener noreferrer" aria-label="Basis functions, lecture 9"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Basis functions</span></a></div></td></tr>
+<tr id="lecture-10"><td class="no"><span class="visually-hidden">Lecture </span>10</td><td class="topic"><h3 id="lecture-10-title">Linear regression: geometric interpretation</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 10"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=SE0WhKNd8K8" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 10"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/geometric-linear-regression.html" target="_blank" rel="noopener noreferrer" aria-label="Geometric linear regression, lecture 10"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Geometric linear regression</span></a></div></td></tr>
+<tr id="lecture-11"><td class="no"><span class="visually-hidden">Lecture </span>11</td><td class="topic"><h3 id="lecture-11-title">Multicollinearity and dummy variables</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 11"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=htXMbi-G5HQ" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 11"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/dummy-variables-multi-colinearity.html" target="_blank" rel="noopener noreferrer" aria-label="Dummy variables and multicollinearity, lecture 11"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Dummy variables and multicollinearity</span></a></div></td></tr>
+<tr id="lecture-12"><td class="no"><span class="visually-hidden">Lecture </span>12</td><td class="topic"><h3 id="lecture-12-title">Gradient descent I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/optimization/slides/gradient-descent.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 12"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=3BJfkVM1R9A" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 12"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/taylor.html" target="_blank" rel="noopener noreferrer" aria-label="Taylor series, lecture 12"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Taylor series</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/contour.html" target="_blank" rel="noopener noreferrer" aria-label="Contour plots and gradient descent, lecture 12"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Contour plots and gradient descent</span></a></div></td></tr>
+<tr id="lecture-13"><td class="no"><span class="visually-hidden">Lecture </span>13</td><td class="topic"><h3 id="lecture-13-title">Tutorial: Google Cloud, forecasting, polynomial regression</h3><p class="sub">Google Cloud, forecasting, and polynomial regression with basis functions.</p></td>
+<td class="res"><div class="rl mats"><a class="r r-link" href="https://alexshtf.github.io/2024/01/21/Bernstein.html" target="_blank" rel="noopener noreferrer" aria-label="Reading: Polynomial regression, lecture 13"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Reading: Polynomial regression</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/polynomial-features.ipynb" target="_blank" rel="noopener noreferrer" aria-label="Polynomial regression (GitHub, not rendered), lecture 13"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Polynomial regression (GitHub, not rendered)</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/autoregressive_model.html" target="_blank" rel="noopener noreferrer" aria-label="Autoregressive model, lecture 13"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Autoregressive model</span></a></div></td></tr>
+<tr id="lecture-14"><td class="no"><span class="visually-hidden">Lecture </span>14</td><td class="topic"><h3 id="lecture-14-title">Gradient descent II</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/optimization/slides/gradient-descent.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 14"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=GoGnoqkITjs" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 14"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/gd.html" target="_blank" rel="noopener noreferrer" aria-label="Gradient descent, lecture 14"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Gradient descent</span></a></div></td></tr>
+<tr id="lecture-15"><td class="no"><span class="visually-hidden">Lecture </span>15</td><td class="topic"><h3 id="lecture-15-title">Movie recommendation and matrix factorisation</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/movie-recommendation.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 15"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=zf1e3HhLriM" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 15"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/movie-recommendation-knn-mf.html" target="_blank" rel="noopener noreferrer" aria-label="Movie recommendation, lecture 15"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Movie recommendation</span></a></div></td></tr>
+<tr id="lecture-16"><td class="no"><span class="visually-hidden">Lecture </span>16</td><td class="topic"><h3 id="lecture-16-title">Regularised linear regression: ridge and lasso</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ridge-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Ridge regression, lecture 16"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Ridge regression</span></a><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/lasso-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Lasso regression, lecture 16"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Lasso regression</span></a></div><div class="rl vids"><a class="r r-recording" href="https://youtu.be/Jn4dMLGSZuQ?si=WoHlG7xm28FonD-I" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 16"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div></td></tr>
+<tr id="lecture-17"><td class="no"><span class="visually-hidden">Lecture </span>17</td><td class="topic"><h3 id="lecture-17-title">Coordinate descent, time complexity, maths for ML, convexity</h3><p class="sub">Not recorded.</p></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/optimization/slides/coordinate_descent.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Coordinate descent, lecture 17"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Coordinate descent</span></a><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/maths/slides/time_complexity.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Time complexity, lecture 17"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Time complexity</span></a><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/maths/slides/ml-maths.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Maths for ML, lecture 17"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Maths for ML</span></a><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/optimization/slides/convexity/convexity.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Convexity, lecture 17"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Convexity</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/sklearn-on-gpu.ipynb" target="_blank" rel="noopener noreferrer" aria-label="scikit-learn on GPU (GitHub, not rendered), lecture 17"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">scikit-learn on GPU (GitHub, not rendered)</span></a></div></td></tr>
+</tbody></table></section>
+
+<section class="mod" id="classification-and-neural-networks" aria-labelledby="classification-and-neural-networks-title"><div class="mod-h"><h2 id="classification-and-neural-networks-title">Classification and neural networks</h2><span class="r">Lectures 18–26</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="lecture-18"><td class="no"><span class="visually-hidden">Lecture </span>18</td><td class="topic"><h3 id="lecture-18-title">Guest lecture: adversarial examples for ML</h3><p class="sub">Guest lecture by Arjun Bhagoji.</p></td>
+<td class="res"><div class="rl mats"><a class="r r-link" href="https://arjunbhagoji.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Speaker: Arjun Bhagoji, lecture 18"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Speaker: Arjun Bhagoji</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/guest-lecture/Student_copy_adv_examples_tutorial__Arjun_Bhagoji.ipynb" target="_blank" rel="noopener noreferrer" aria-label="Adversarial examples tutorial (GitHub, not rendered), lecture 18"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Adversarial examples tutorial (GitHub, not rendered)</span></a></div></td></tr>
+<tr id="lecture-19"><td class="no"><span class="visually-hidden">Lecture </span>19</td><td class="topic"><h3 id="lecture-19-title">Logistic regression I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/logistic-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 19"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=vMlOUAys38Q" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 19"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/logits-usage.html" target="_blank" rel="noopener noreferrer" aria-label="Why use logits, lecture 19"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Why use logits</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/logistic-regression-torch.html" target="_blank" rel="noopener noreferrer" aria-label="Logistic regression in PyTorch, lecture 19"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Logistic regression in PyTorch</span></a></div></td></tr>
+<tr id="lecture-20"><td class="no"><span class="visually-hidden">Lecture </span>20</td><td class="topic"><h3 id="lecture-20-title">Logistic regression II</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/logistic-regression.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 20"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=oD8EnYTYdpk" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 20"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/logistic-circular.html" target="_blank" rel="noopener noreferrer" aria-label="Logistic regression on circular data, lecture 20"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Logistic regression on circular data</span></a></div></td></tr>
+<tr id="lecture-21"><td class="no"><span class="visually-hidden">Lecture </span>21</td><td class="topic"><h3 id="lecture-21-title">Multi-layer perceptrons I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/mlp.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 21"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=eWGDS4nvd_w" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 21"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div></td></tr>
+<tr id="lecture-22"><td class="no"><span class="visually-hidden">Lecture </span>22</td><td class="topic"><h3 id="lecture-22-title">Multi-layer perceptrons II</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/mlp.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 22"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=qPXJNgSYcXA" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 22"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/nn-vectorization-with-vmap-jaxtyping-and-beartype-zeel.ipynb" target="_blank" rel="noopener noreferrer" aria-label="Vectorised networks with vmap (GitHub, not rendered), lecture 22"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Vectorised networks with vmap (GitHub, not rendered)</span></a></div></td></tr>
+<tr id="lecture-23"><td class="no"><span class="visually-hidden">Lecture </span>23</td><td class="topic"><h3 id="lecture-23-title">Next-token prediction</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/next-token-prediction.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 23"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=RTRuN0GgQo4&amp;feature=youtu.be" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 23"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/names.html" target="_blank" rel="noopener noreferrer" aria-label="Generating names, lecture 23"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Generating names</span></a></div></td></tr>
+<tr id="lecture-24"><td class="no"><span class="visually-hidden">Lecture </span>24</td><td class="topic"><h3 id="lecture-24-title">Autograd</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/autograd.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 24"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=Qo3z51lBQ1k" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 24"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/autodiff.html" target="_blank" rel="noopener noreferrer" aria-label="Automatic differentiation, lecture 24"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Automatic differentiation</span></a></div></td></tr>
+<tr id="lecture-25"><td class="no"><span class="visually-hidden">Lecture </span>25</td><td class="topic"><h3 id="lecture-25-title">Convolutional neural networks I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/cnn-1d.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: 1D CNN, lecture 25"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: 1D CNN</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=CfC3hOYSTNc" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 25"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/1d-cnn.html" target="_blank" rel="noopener noreferrer" aria-label="1D CNN, lecture 25"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">1D CNN</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/cnn-edge.html" target="_blank" rel="noopener noreferrer" aria-label="Edge detection, lecture 25"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Edge detection</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/cnn.html" target="_blank" rel="noopener noreferrer" aria-label="LeNet, lecture 25"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">LeNet</span></a></div></td></tr>
+<tr id="lecture-26"><td class="no"><span class="visually-hidden">Lecture </span>26</td><td class="topic"><h3 id="lecture-26-title">Convolutional neural networks II</h3></td>
+<td class="res"><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=tZJwzURBinE" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 26"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/cnn.ipynb" target="_blank" rel="noopener noreferrer" aria-label="CNN (GitHub, not rendered), lecture 26"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">CNN (GitHub, not rendered)</span></a></div></td></tr>
+</tbody></table></section>
+
+<section class="mod" id="neighbours-unsupervised-and-reinforcement-learning" aria-labelledby="neighbours-unsupervised-and-reinforcement-learning-title"><div class="mod-h"><h2 id="neighbours-unsupervised-and-reinforcement-learning-title">Neighbours, unsupervised and reinforcement learning</h2><span class="r">Lectures 27–30</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="lecture-27"><td class="no"><span class="visually-hidden">Lecture </span>27</td><td class="topic"><h3 id="lecture-27-title">K-nearest neighbours</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/knn.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 27"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a><a class="r r-link" href="http://mlss.tuebingen.mpg.de/2015/slides/ghahramani/gp-neural-nets15.pdf" target="_blank" rel="noopener noreferrer" aria-label="Reading: Parametric vs non-parametric (MLSS), lecture 27"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Reading: Parametric vs non-parametric (MLSS)</span></a><a class="r r-link" href="https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/" target="_blank" rel="noopener noreferrer" aria-label="Reading: Machine Learning Mastery, lecture 27"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Reading: Machine Learning Mastery</span></a><a class="r r-link" href="https://stats.stackexchange.com/questions/268638/what-exactly-is-the-difference-between-a-parametric-and-non-parametric-model" target="_blank" rel="noopener noreferrer" aria-label="Reading: StackExchange, lecture 27"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Reading: StackExchange</span></a><a class="r r-link" href="https://sebastianraschka.com/faq/docs/parametric_vs_nonparametric.html" target="_blank" rel="noopener noreferrer" aria-label="Reading: Sebastian Raschka, lecture 27"><svg class="ic ic-link" viewbox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"></path><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"></path></svg><span class="t">Reading: Sebastian Raschka</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=hwwl_M-emaY" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 27"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml2023/notebooks/posts/parametric-non-parametric.html" target="_blank" rel="noopener noreferrer" aria-label="Parametric vs non-parametric, lecture 27"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Parametric vs non-parametric</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/curse-dimensionality.html" target="_blank" rel="noopener noreferrer" aria-label="Curse of dimensionality, lecture 27"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Curse of dimensionality</span></a></div></td></tr>
+<tr id="lecture-28"><td class="no"><span class="visually-hidden">Lecture </span>28</td><td class="topic"><h3 id="lecture-28-title">Reinforcement learning</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/advanced/slides/rl.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 28"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=Gth666ecEYM" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 28"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/rl-1.html" target="_blank" rel="noopener noreferrer" aria-label="Reinforcement learning I, lecture 28"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Reinforcement learning I</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/rl-2.html" target="_blank" rel="noopener noreferrer" aria-label="Reinforcement learning II, lecture 28"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Reinforcement learning II</span></a></div></td></tr>
+<tr id="lecture-29"><td class="no"><span class="visually-hidden">Lecture </span>29</td><td class="topic"><h3 id="lecture-29-title">Unsupervised learning</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/unsupervised/slides/unsupervised.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 29"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=Zoubg9Gvq40" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 29"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/pca.ipynb" target="_blank" rel="noopener noreferrer" aria-label="PCA (GitHub, not rendered), lecture 29"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">PCA (GitHub, not rendered)</span></a></div></td></tr>
+<tr id="lecture-30"><td class="no"><span class="visually-hidden">Lecture </span>30</td><td class="topic"><h3 id="lecture-30-title">Approximate nearest neighbours</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/knn-approx.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 30"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=C9HQLyXwEw0" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 30"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/knn-variants.html" target="_blank" rel="noopener noreferrer" aria-label="KNN variants, lecture 30"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">KNN variants</span></a></div></td></tr>
+</tbody></table></section>
+
+<section class="mod" id="support-vector-machines" aria-labelledby="support-vector-machines-title"><div class="mod-h"><h2 id="support-vector-machines-title">Support vector machines</h2><span class="r">Lectures 31–35</span></div>
+<table class="lt" data-quarto-disable-processing="true"><tbody>
+<tr id="lecture-31"><td class="no"><span class="visually-hidden">Lecture </span>31</td><td class="topic"><h3 id="lecture-31-title">Constrained optimisation</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/maths/slides/constrained-1.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Constrained optimisation I, lecture 31"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Constrained optimisation I</span></a><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/maths/slides/constrained-2.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides: Constrained optimisation II (self-study), lecture 31"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides: Constrained optimisation II (self-study)</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=Gr1o97QI1PI" target="_blank" rel="noopener noreferrer" aria-label="Part II recording, from an earlier run, lecture 31"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Part II recording, from an earlier run</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/svm-cvxopt.ipynb" target="_blank" rel="noopener noreferrer" aria-label="SVM with CVXOPT (GitHub, not rendered), lecture 31"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">SVM with CVXOPT (GitHub, not rendered)</span></a></div></td></tr>
+<tr id="lecture-32"><td class="no"><span class="visually-hidden">Lecture </span>32</td><td class="topic"><h3 id="lecture-32-title">Support vector machines I</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-intro.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 32"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=GJ79bHF1P5I" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 32"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm.html" target="_blank" rel="noopener noreferrer" aria-label="SVM, lecture 32"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">SVM</span></a></div></td></tr>
+<tr id="lecture-33"><td class="no"><span class="visually-hidden">Lecture </span>33</td><td class="topic"><h3 id="lecture-33-title">Support vector machines II: kernels</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-intro.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 33"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=evGchl_3pGY&amp;list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF&amp;index=30" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 33"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-primal-dual.html" target="_blank" rel="noopener noreferrer" aria-label="Primal and dual, lecture 33"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Primal and dual</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel.html" target="_blank" rel="noopener noreferrer" aria-label="Kernels, lecture 33"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Kernels</span></a></div></td></tr>
+<tr id="lecture-34"><td class="no"><span class="visually-hidden">Lecture </span>34</td><td class="topic"><h3 id="lecture-34-title">Support vector machines III: QP, kernels as similarity</h3></td>
+<td class="res"><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=BLj0hhT-tL4" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 34"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-cvxopt.html" target="_blank" rel="noopener noreferrer" aria-label="Quadratic programming, lecture 34"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Quadratic programming</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel-understanding.html" target="_blank" rel="noopener noreferrer" aria-label="Understanding kernels, lecture 34"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Understanding kernels</span></a></div></td></tr>
+<tr id="lecture-35"><td class="no"><span class="visually-hidden">Lecture </span>35</td><td class="topic"><h3 id="lecture-35-title">Support vector machines IV: kernels, soft margin</h3></td>
+<td class="res"><div class="rl mats"><a class="r r-slides" href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-soft-margin.pdf" target="_blank" rel="noopener noreferrer" aria-label="Slides, lecture 35"><svg class="ic ic-slides" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M12 16v4M8 20h8M8 12.5v-2M12 12.5V8M16 12.5v-3"></path></svg><span class="t">Slides</span></a></div><div class="rl vids"><a class="r r-recording" href="https://www.youtube.com/watch?v=QaYpHAc5N-A&amp;list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF&amp;index=32" target="_blank" rel="noopener noreferrer" aria-label="Recording, lecture 35"><svg class="ic ic-recording" viewbox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg><span class="t">Recording</span></a></div><div class="rl prac"><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel.html" target="_blank" rel="noopener noreferrer" aria-label="Understanding kernels, lecture 35"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Understanding kernels</span></a><a class="r r-notebook" href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-soft-margin.html" target="_blank" rel="noopener noreferrer" aria-label="Soft margin, lecture 35"><svg class="ic ic-notebook" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"></rect><path d="m9.5 9.5-3 2.5 3 2.5M14.5 9.5l3 2.5-3 2.5"></path></svg><span class="t">Soft margin</span></a></div></td></tr>
+</tbody></table></section>
+
 </div>
-<div class="callout-title-container flex-fill">
-Summary
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://github.com/nipunbatra/ml-teaching">Github repo containing source code for lectures and notebooks</a></li>
-<li><a href="https://nipunbatra.github.io/ml-teaching/slides.html">PDF Lecture slides</a></li>
-<li><a href="https://nipunbatra.github.io/ml-teaching/notebooks.html">Rendered Lecture notebooks</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF">YouTube playlist containing recodings</a></li>
-</ul>
-</div>
-</div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Lecture #</th>
-<th style="text-align: center;">Date</th>
-<th style="text-align: left;">Topic (Slides)</th>
-<th style="text-align: center;">Notebooks</th>
-<th>YouTube Recording</th>
-<th>Reading</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">30 Dec 2023</td>
-<td style="text-align: left;"><a href="./exams/prereq.html">Pre-requisite quiz released</a></td>
-<td style="text-align: center;"></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">3 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/basics/slides/1-introduction-ml.pdf">Introduction and Logistics</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/transcript.html">Transcription and local LLMs</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/object-detection-segmentation.html">Segmentation and Localization</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/text_to_image.html">Prompt to Image</a></td>
-<td><a href="https://www.youtube.com/watch?v=XuDrvFmvk2U">Recording</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">5 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/basics/slides/accuracy_convention.pdf">Convention, Metrics, Classification, Regression</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/rule-based-vs-ml.html">Rule based vs ML</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/confusion-mnist.html">Confusion Matrix</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/dummy-baselines.html">Dummy baselines</a></td>
-<td><a href="https://www.youtube.com/watch?v=WUfduFsodE0">Recording</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">8 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/decision-trees.pdf">Decision Trees 1</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/entropy.html">Entropy</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-output.html">Decision Trees Real Output</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-input-discrete-output.html">DT Real Input Discrete Output</a></td>
-<td><a href="https://www.youtube.com/watch?v=Bc6p3Yxgo7c">Recording</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">10 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/bias-variance.pdf">Decision Trees 2, Bias and Variance</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/bias-variance.html">Bias variance</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/decision-tree-real-input-real-output.html">Decision Trees + Overfitting, Underfitting</a></td>
-<td><a href="https://www.youtube.com/watch?v=zqNj-B78i_0">Recording</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">12 Jan</td>
-<td style="text-align: left;">Tutorial on Numpy, Pandas, Classes, <a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/cross-validation.pdf">Cross-validation</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/numpy-pandas-basics.html">Numpy, Pandas, Entropy</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/classes-trees.html">Classes and Trees</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/hyperparams-experiments.html">Cross-validation and tuning hyperparameters</a></td>
-<td><a href="https://www.youtube.com/watch?v=P980btm9C3c">Tutorial recording</a>, <a href="https://www.youtube.com/watch?v=GP4XW8wzPM8">Lecture on Cross-validation</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">15 Jan</td>
-<td style="text-align: left;">Cross-validation, <a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ensemble.pdf">Ensemble Methods</a></td>
-<td style="text-align: center;"><a href="https://nipunbatra.github.io/ml-teaching/notebooks/hyperparams-experiments.html">Cross-validation and tuning hyperparameters</a></td>
-<td><a href="https://www.youtube.com/watch?v=FrNR-1cfpHc">Recording</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">17 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ensemble.pdf">Lecture on Random Forests</a></td>
-<td style="text-align: center;">, Tutorial on Random Forests + Meshgrid</td>
-<td><a href="https://www.youtube.com/watch?v=NDYiYk7vJTU">Video</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/ensemble-feature-importance.html">Notebook on Random Forests feature importance from scratch</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/meshgrid.html">Notebook on meshgrid</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">19 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf">Linear Regression</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=3cAzgZOrC3U">Recording</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">24 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf">Linear Regression: Basis Functions</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=gkb9-xJfR08">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/basis.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">25 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf">Linear Regression: Geometric Interpretation</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=SE0WhKNd8K8">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/geometric-linear-regression.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">27 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/linear-regression.pdf">Multi-colinearity, Dummy Variables</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=htXMbi-G5HQ">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/dummy-variables-multi-colinearity.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">29 Jan</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/optimization/slides/gradient-descent.pdf">Gradient Descent</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=3BJfkVM1R9A">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/taylor.html">Notebook on Taylor’s series</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/contour.html">Notebook on Contour plots and gradient descent</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">31 Jan</td>
-<td style="text-align: left;">Tutorial on GCloud + Forecasting + Polynomial Regression with Basis functions</td>
-<td style="text-align: center;"></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/polynomial-features.ipynb">Notebook on Polynomial Regression</a> [Repo only - not published], <a href="https://nipunbatra.github.io/ml-teaching/notebooks/autoregressive_model.html">Notebook on Autoregressive Model</a></td>
-<td><a href="https://alexshtf.github.io/2024/01/21/Bernstein.html">Article on Polynomial Regression</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">2 Feb</td>
-<td style="text-align: left;">Quiz 1</td>
-<td style="text-align: center;"></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">5 Feb</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/optimization/slides/gradient-descent.pdf">Gradient Descent</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=GoGnoqkITjs">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/gd.html">Notebook on Gradient Descent</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">7 Feb</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/movie-recommendation.pdf">Movie recommendation, Matrix Factorisation</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=zf1e3HhLriM">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/movie-recommendation-knn-mf.html">Notebook on Movie Recommendation</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">9 Feb</td>
-<td style="text-align: left;">Regularised Linear Regression: <a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/ridge-regression.pdf">Ridge Regression</a>, <a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/lasso-regression.pdf">LASSO Regression</a></td>
-<td style="text-align: center;"><a href="https://youtu.be/Jn4dMLGSZuQ?si=WoHlG7xm28FonD-I">Recording</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">17</td>
-<td style="text-align: center;">12 Feb</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/optimization/slides/coordinate_descent.pdf">Coordinate Descent</a> + <a href="https://nipunbatra.github.io/ml-teaching/maths/slides/time_complexity.pdf">Time Complexity</a> + <a href="https://nipunbatra.github.io/ml-teaching/maths/slides/ml-maths.pdf">ML Maths</a> + <a href="https://nipunbatra.github.io/ml-teaching/optimization/slides/convexity/convexity.pdf">Convexity</a></td>
-<td style="text-align: center;">Not Recorded</td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/sklearn-on-gpu.ipynb">Notebook on Sklearn with GPU</a> [Repo only - not published]</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">18</td>
-<td style="text-align: center;">14 Feb</td>
-<td style="text-align: left;">Mock Quiz [Slides unavailable]</td>
-<td style="text-align: center;"></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">19</td>
-<td style="text-align: center;">16 Feb</td>
-<td style="text-align: left;">Guest Lecture by <a href="https://arjunbhagoji.github.io/">Arjun Bhagoji</a>, Adversarial Examples for ML [Slides unavailable]</td>
-<td style="text-align: center;"></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/guest-lecture/Student_copy_adv_examples_tutorial__Arjun_Bhagoji.ipynb">Notebook</a> [Repo only - not published]&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">26 Feb</td>
-<td style="text-align: left;">Mid sem exam discussion</td>
-<td style="text-align: center;"></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">21</td>
-<td style="text-align: center;">28 Feb</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/logistic-regression.pdf">Logistic Regression</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=vMlOUAys38Q">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/logits-usage.html">Notebook on why use logits</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/logistic-regression-torch.html">Notebook on Logistic regression in Torch</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">22</td>
-<td style="text-align: center;">1 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/logistic-regression.pdf">Logistic Regression</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=oD8EnYTYdpk">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/logistic-circular.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">5 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/mlp.pdf">MLP I</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=eWGDS4nvd_w">Recording</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">24</td>
-<td style="text-align: center;">6 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/mlp.pdf">MLP II</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=qPXJNgSYcXA">Recording</a></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/nn-vectorization-with-vmap-jaxtyping-and-beartype-zeel.ipynb">Notebook</a> [Repo only - not published]</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">25</td>
-<td style="text-align: center;">7 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/next-token-prediction.pdf">Next token prediction</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=RTRuN0GgQo4&amp;feature=youtu.be">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/names.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">26</td>
-<td style="text-align: center;">11 March</td>
-<td style="text-align: left;">Mock Quiz [Slides unavailable]</td>
-<td style="text-align: center;"></td>
-<td>Solution [Slides unavailable]</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">27</td>
-<td style="text-align: center;">13 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/autograd.pdf">Autograd</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=Qo3z51lBQ1k">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/autodiff.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">28</td>
-<td style="text-align: center;">18 March</td>
-<td style="text-align: left;">CNN - I [Slides unavailable], <a href="https://nipunbatra.github.io/ml-teaching/neural-networks/slides/cnn-1d.pdf">1D CNN</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=CfC3hOYSTNc">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/1d-cnn.html">Notebook 1</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/cnn-edge.html">Notebook 2 on edge detection</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/cnn.html">Notebook 3 on LeNet</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">29</td>
-<td style="text-align: center;">20 March</td>
-<td style="text-align: left;">CNN - II [Slides unavailable]</td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=tZJwzURBinE">Recording</a></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/cnn.ipynb">Notebook</a> [Repo only - not published]</td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">30</td>
-<td style="text-align: center;">22 March</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/knn.pdf">KNN</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=hwwl_M-emaY">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml2023/notebooks/posts/parametric-non-parametric.html">Notebook (Parametric v/s Non-Parametric)</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/curse-dimensionality.html">Notebook (Curse of dimensionality)</a></td>
-<td>Reference on Parameteric v/s Non-Parametric <a href="http://mlss.tuebingen.mpg.de/2015/slides/ghahramani/gp-neural-nets15.pdf">from MLSS</a>, <a href="https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/">ML Mastery</a>, <a href="https://stats.stackexchange.com/questions/268638/what-exactly-is-the-difference-between-a-parametric-and-non-parametric-model">StackExchange</a>, <a href="https://sebastianraschka.com/faq/docs/parametric_vs_nonparametric.html">Sebastian Raschka’s blog</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">31</td>
-<td style="text-align: center;">1 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/advanced/slides/rl.pdf">Reinforcement learning</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=Gth666ecEYM">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/rl-1.html">Notebook 1</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/rl-2.html">Notebook 2</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">3 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/unsupervised/slides/unsupervised.pdf">Unsupervised learning</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=Zoubg9Gvq40">Recording</a></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/pca.ipynb">Notebook</a> [Repo only - not published]</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">33</td>
-<td style="text-align: center;">5 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/knn-approx.pdf">Approximate KNN</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=C9HQLyXwEw0">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/knn-variants.html">Notebook</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">34</td>
-<td style="text-align: center;">8 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/maths/slides/constrained-1.pdf">Constrained Optimization 1</a>, <a href="https://nipunbatra.github.io/ml-teaching/maths/slides/constrained-2.pdf">Constrained Optimization 2 (self study)</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=Gr1o97QI1PI">Part 2 recording from older run</a></td>
-<td><a href="https://github.com/nipunbatra/ml-teaching/blob/master/notebooks/svm-cvxopt.ipynb">Notebook</a> [Repo only - not published]</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">35</td>
-<td style="text-align: center;">10 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-intro.pdf">SVM - I</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=GJ79bHF1P5I">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm.html">Notebook 1</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">36</td>
-<td style="text-align: center;">12 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-intro.pdf">SVM - II (Kernel)</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=evGchl_3pGY&amp;list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF&amp;index=30">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-primal-dual.html">Notebook</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel.html">Notebook 2</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">37</td>
-<td style="text-align: center;">15 April</td>
-<td style="text-align: left;">SVM - III (QP, Kernels as similarity)</td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=BLj0hhT-tL4">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-cvxopt.html">Notebook on QP</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel-understanding.html">Notebook on kernels-1</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">38</td>
-<td style="text-align: center;">17 April</td>
-<td style="text-align: left;"><a href="https://nipunbatra.github.io/ml-teaching/supervised/slides/svm-soft-margin.pdf">SVM - IV (Kernel understanding, Soft Margin)</a></td>
-<td style="text-align: center;"><a href="https://www.youtube.com/watch?v=QaYpHAc5N-A&amp;list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF&amp;index=32">Recording</a></td>
-<td><a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-kernel.html">Notebook on kernel understanding</a>, <a href="https://nipunbatra.github.io/ml-teaching/notebooks/svm-soft-margin.html">Notebook on soft margin</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">39</td>
-<td style="text-align: center;">19 April</td>
-<td style="text-align: left;">Overall revision</td>
-<td style="text-align: center;"></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p class="small muted">Notebooks marked "GitHub, not rendered" are in the ml-teaching repository only. Quizzes, mock quizzes, the mid-semester exam discussion and the final revision class are on the <a href="assessment.html#deadlines">Assessment</a> page.</p>
 
 
 
 </main> <!-- /main -->
+<footer class="foot">
+  <span>Prof. Nipun Batra · IIT Gandhinagar · Semester II, 2023–24</span>
+  <span><a href="https://nipunbatra.github.io/ml-teaching/">Course materials</a> · <a href="https://nipunbatra.github.io/teaching.html">All courses</a> · <a href="https://nipunbatra.github.io">nipunbatra.github.io</a></span>
+</footer>
+<script>document.body.append(document.currentScript.previousElementSibling);</script>
+<script>
+(() => {
+  // Mark the current page in the rail. Quarto writes the rail links relative to this page.
+  const home = document.querySelector('.rail a.code');
+  const root = home ? new URL(home.getAttribute('href'), location.href).pathname.replace(/[^/]*$/, '') : '/';
+  let rel = location.pathname.startsWith(root) ? location.pathname.slice(root.length) : '';
+  if (rel === '' || rel.endsWith('/')) rel += 'index.html';
+  else if (!/\.[a-z]+$/i.test(rel)) rel += '.html';
+  // A data-page ending in "/" marks a whole folder (for example Assignments/).
+  document.querySelectorAll('.rail nav a[data-page]').forEach(a => {
+    const p = a.dataset.page;
+    if (p.endsWith('/') ? rel.startsWith(p) : rel === p) a.setAttribute('aria-current', 'page');
+  });
+
+  // Copy-link buttons on section headings, lectures and assignment questions.
+  const LINK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"/></svg>';
+  document.querySelectorAll('main.content :is(h2, h3, h4)').forEach(h => {
+    if (h.closest('.next, .quarto-title-block, .callout, details') || h.querySelector('.anchor')) return;
+    const row = h.closest('tr[id]');
+    const sec = h.parentElement.tagName === 'SECTION' ? h.parentElement : h.closest('.mod');
+    const target = row || (sec && sec.id ? sec : null) || (h.id ? h : null);
+    if (!target) return;
+    const id = target.id;
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'anchor';
+    b.title = 'Copy link';
+    b.setAttribute('aria-label', 'Copy link to ' + (row ? 'lecture ' + id.replace('lecture-', '') : h.textContent.trim()));
+    b.innerHTML = LINK + '<span class="done">Copied</span>';
+    b.addEventListener('click', () => {
+      const url = location.origin + location.pathname + '#' + id;
+      history.replaceState(null, '', '#' + id);
+      const done = () => { b.classList.add('copied'); setTimeout(() => b.classList.remove('copied'), 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => {});
+    });
+    h.append(b);
+  });
+
+  // Contain wide tables in assignments and policies.
+  document.querySelectorAll('main.content table:not(.lt):not(.t)').forEach(table => {
+    if (table.parentElement.classList.contains('course-table-scroll')) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'course-table-scroll';
+    wrapper.setAttribute('role', 'region');
+    wrapper.setAttribute('aria-label', 'Scrollable table');
+    wrapper.tabIndex = 0;
+    table.before(wrapper);
+    wrapper.append(table);
+    if (table.rows[0]?.cells.length <= 2) table.classList.add('course-table-compact');
+  });
+
+  // Dates: read the table in _dates.qmd ("08 Oct 26" or "08 Oct 26, 6:30 pm", IST), grey out the past,
+  // draw a Today line on Assessment and list what is coming up on Home.
+  const MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  const IST = 330 * 60000, DAY = 864e5;
+  const istDay = t => Math.floor((t + IST) / DAY);
+  const now = Date.now(), today = istDay(now);
+  const START = Date.UTC(2024, 0, 1) / DAY; // Monday of the first teaching week
+  function parse(text) {
+    const m = text.match(/(\d{1,2}) ([A-Z][a-z]{2}) (\d{2})(?:,\s*(\d{1,2}):(\d{2})\s*(am|pm))?/i);
+    if (!m) return null;
+    const [, d, mon, y, hh, mm, ap] = m;
+    const day = Date.UTC(2000 + +y, MONTHS[mon], +d) / DAY;
+    let end;
+    if (hh) end = Date.UTC(2000 + +y, MONTHS[mon], +d, (+hh % 12) + (ap.toLowerCase() === 'pm' ? 12 : 0), +mm) - IST;
+    else end = (day + 1) * DAY - IST - 1;
+    return { day, end, time: hh ? `${hh}:${mm} ${ap}` : '' };
+  }
+  const fmt = (day, opts) => new Date(day * DAY).toLocaleDateString('en-GB', Object.assign({ timeZone: 'UTC' }, opts));
+  document.querySelectorAll('.dates table').forEach(table => {
+    table.classList.add('t');
+    const rows = [...table.tBodies[0].rows].map(tr => ({ tr, when: parse(tr.cells[0].textContent) })).filter(r => r.when);
+    const box = table.closest('.next');
+    if (box) {
+      // Home: the next four dates, grouped by day.
+      const groups = [];
+      rows.filter(r => r.when.end >= now).forEach(r => {
+        const g = groups.find(x => x.day === r.when.day);
+        if (g) g.rows.push(r); else groups.push({ day: r.when.day, time: r.when.time, rows: [r] });
+      });
+      const ol = document.createElement('ol');
+      groups.slice(0, 4).forEach(g => {
+        const left = g.day - today;
+        const li = document.createElement('li');
+        if (left <= 3) li.className = 'hot';
+        const rel = left === 0 ? 'today' : left === 1 ? 'tomorrow' : `in ${left} days`;
+        li.innerHTML = `<span class="d">${fmt(g.day, { day: '2-digit', month: 'short' })}<small>${fmt(g.day, { weekday: 'short' })}${g.time ? ' ' + g.time : ''}<br>${rel}</small></span><span></span>`;
+        g.rows.forEach((r, i) => {
+          if (i) li.lastChild.append(document.createElement('br'));
+          const cell = r.tr.cells[1].cloneNode(true);
+          li.lastChild.append(...cell.childNodes);
+        });
+        ol.append(li);
+      });
+      if (!groups.length) ol.innerHTML = '<li><span></span><span>No more dates this semester.</span></li>';
+      table.closest('.dates').replaceWith(ol);
+      return;
+    }
+    // Assessment: grey out the past, mark this week, and draw the Today line.
+    let placed = false;
+    rows.forEach(({ tr, when }) => {
+      const past = when.end < now;
+      tr.classList.toggle('past', past);
+      const tag = document.createElement('td');
+      tag.className = 'tag';
+      if (!past && when.day - today <= 7) tag.innerHTML = '<span class="pill now">This week</span>';
+      tr.append(tag);
+      if (!past && !placed) {
+        placed = true;
+        const t = document.createElement('tr');
+        t.className = 'today';
+        const week = Math.floor((today - START) / 7) + 1;
+        t.innerHTML = `<td>Today, ${fmt(today, { day: '2-digit', month: 'short' })}</td><td colspan="2">${week >= 1 && week <= 17 ? 'Week ' + week : ''}</td>`;
+        tr.before(t);
+      }
+    });
+    const head = table.tHead?.rows[0];
+    if (head) head.append(document.createElement('th'));
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -746,13 +417,14 @@ Summary
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -781,6 +453,11 @@ Summary
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
