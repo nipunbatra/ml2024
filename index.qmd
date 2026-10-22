@@ -1,74 +1,111 @@
 ---
-title: "ES 335 Machine Learning"
+pagetitle: "ES 335 · Machine Learning"
+description: "Machine Learning at IIT Gandhinagar, Semester II 2023–24"
+body-classes: dl wide
 ---
 
+::: {.top}
 
-![](images/logo.jpeg)
+::: {.top-main}
+```{=html}
+<span hidden></span><!-- keeps Quarto from moving the h1 into its own title block -->
+<h1 class="h1">Machine Learning</h1>
+<p class="role">ES 335 · IIT Gandhinagar · Semester II, 2023–24</p>
+<p class="lede" style="margin-top:18px">ES 335 is an introduction to machine learning: decision trees and ensembles, linear and logistic regression, gradient descent, neural networks and CNNs, nearest neighbours, unsupervised and reinforcement learning, and support vector machines. Most lectures link their slides, a full class recording and notebooks.</p>
+<dl class="facts">
+  <dt>Instructor</dt><dd><a href="https://nipunbatra.github.io">Prof. Nipun Batra</a></dd>
+  <dt>Office</dt><dd>13/401C (<a href="https://www.youtube.com/shorts/FmCbCkJQN1g">directions</a>)</dd>
+  <dt>Email</dt><dd><a href="mailto:nipun.batra@iitgn.ac.in">nipun.batra@iitgn.ac.in</a></dd>
+  <dt>Lectures</dt><dd>Monday and Wednesday, 8:30–10:00 am, Room 10/103</dd>
+  <dt>Tutorials</dt><dd>Friday, 11:30 am–1:00 pm, Room 10/103</dd>
+  <dt>Teaching assistants</dt><dd><a href="#people">10 TAs</a></dd>
+  <dt>Prerequisite test</dt><dd><a href="exams/prereq.html">Open-book test</a>, due 6 January 2024, 9 pm</dd>
+  <dt>Recordings</dt><dd><a href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF">YouTube playlist</a></dd>
+</dl>
+```
+:::
 
-::: {.callout-tip}
-## Summary
-
-* Instructor: Nipun Batra <nipun.batra@iitgn.ac.in>
-    * Office: 13/401C
-    * [YouTube video](https://www.youtube.com/shorts/FmCbCkJQN1g) showing the directions to my office
-* Teaching Assistants: 
-    * Rishiraj Adhikary <rishiraj.a@iitgn.ac.in>
-    * Inderjeet Bhullar <inderjeet.bhullar@iitgn.ac.in>
-    * Rahul Chembakasseril <rahul.chembakasseril@iitgn.ac.in>
-    * R Yeeshu Dhurandhar <r.yeeshu@iitgn.ac.in>
-    * Suraj Jaiswal <jaiswalsuraj@iitgn.ac.in>
-    * Kalash Kankaria <kalash.kankaria@iitgn.ac.in>,
-    * Sukruta Midigeshi <sukruta.midigeshi@iitgn.ac.in>
-    * Chirag Sarda <chirag.sarda@iitgn.ac.in>,
-    * Ayush Shrivastava <shrivastavaayush@iitgn.ac.in>
-    * Sai Krishna <avulasaikrishna@iitgn.ac.in>
-* Course Timings:
-    * Lectures:  Monday, Wednesday 8:30 AM to 10 AM in 10/103
-    * Tutorials: Friday: 1130 to 1 PM in 10/103
+::: {.next aria-labelledby="record-h"}
+```{=html}
+<span class="label" id="record-h">Course record</span>
+<p class="small" style="margin:0 0 12px">This offering ran from January to April 2024. Its slides, notebooks and class recordings remain available.</p>
+<dl>
+  <dt>Lectures</dt><dd><span class="stat">35</span></dd>
+  <dt>Notebooks</dt><dd><span class="stat">50</span></dd>
+  <dt>Recordings</dt><dd><a href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF">Playlist</a></dd>
+  <dt>Quizzes</dt><dd><a href="assessment.html#quizzes">4, best 3 count</a></dd>
+</dl>
+<p class="all"><a href="assessment.html#deadlines">All dates</a></p>
+```
+:::
 
 :::
 
+```{=html}
+<section class="rule-top" id="lectures"><h2>Lectures</h2>
+<ul class="modules c6">
+  <li><span class="r">1–2</span><a href="schedule.html#foundations">Foundations</a><span class="c">2 lectures</span></li>
+  <li><span class="r">3–7</span><a href="schedule.html#trees-model-fit-and-ensembles">Trees, model fit and ensembles</a><span class="c">5 lectures</span></li>
+  <li><span class="r">8–17</span><a href="schedule.html#linear-models-and-optimisation">Linear models and optimisation</a><span class="c">10 lectures</span></li>
+  <li><span class="r">18–26</span><a href="schedule.html#classification-and-neural-networks">Classification and neural networks</a><span class="c">9 lectures</span></li>
+  <li><span class="r">27–30</span><a href="schedule.html#neighbours-unsupervised-and-reinforcement-learning">Neighbours, unsupervised and reinforcement learning</a><span class="c">4 lectures</span></li>
+  <li><span class="r">31–35</span><a href="schedule.html#support-vector-machines">Support vector machines</a><span class="c">5 lectures</span></li>
+</ul>
+<div class="playlists">
+  <a class="btn ib" href="https://www.youtube.com/playlist?list=PLftoLyLEwECDqanAL7LkZNnZG9VdNCiJF" target="_blank" rel="noopener noreferrer"><svg class="ic ic-recording" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Lecture recordings playlist</a>
+  <a class="btn solid" href="schedule.html">All 35 lectures</a>
+</div>
+</section>
 
+<div class="two rule-top">
+<section id="faq"><h2>Questions</h2>
+<details class="q" id="project"><summary>Is there a project?</summary><p>Not a separate one. Each assignment has a project-like question instead, the same for all students, such as building an activity classifier from public data and then from data you collect on your smartphone.</p></details>
+<details class="q" id="prereqs"><summary>What are the prerequisites?</summary><p>There are no formal prerequisites, but you are expected to know Python programming and data structures (ES 242 or equivalent), probability and statistics, linear algebra and calculus. You must clear the <a href="exams/prereq.html">prerequisite test</a> to take the course.</p></details>
+<details class="q" id="missed-quiz"><summary>What if I miss a quiz?</summary><p>A missed quiz is marked zero and there are no makeups, for any reason. Only the best three of four quizzes count, which is meant for exactly this case.</p></details>
+<details class="q" id="exams"><summary>Is there a mid-semester or end-semester exam?</summary><p>Two of the four quizzes are held in the mid-semester and end-semester exam slots; the other two are held during the semester. All are closed book.</p></details>
+<details class="q" id="laptops"><summary>Can I use my laptop in class?</summary><p>No. Laptops are not allowed in class for any reason.</p></details>
+<p class="small muted" style="margin-top:12px"><a href="faq.html">All questions</a></p>
+</section>
+<section id="references"><h2>References</h2>
+<p class="small muted">Reference textbooks:</p>
+<ul class="refs">
+  <li>Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, <i>An Introduction to Statistical Learning with Applications in R</i> (<a href="http://www-bcf.usc.edu/~gareth/ISL/">online edition</a>)</li>
+  <li>Christopher M. Bishop, <i>Pattern Recognition and Machine Learning</i>, Springer, 2006 (<a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">free PDF</a>)</li>
+  <li>Jerome Friedman, Trevor Hastie and Robert Tibshirani, <i>The Elements of Statistical Learning</i>, Springer, 2001 (<a href="https://web.stanford.edu/~hastie/Papers/ESLII.pdf">free PDF</a>)</li>
+  <li>Richard O. Duda, Peter E. Hart and David G. Stork, <i>Pattern Classification</i>, John Wiley &amp; Sons</li>
+  <li>Tom M. Mitchell, <i>Machine Learning</i>, McGraw Hill, 1997</li>
+  <li>Kevin P. Murphy, <i>Machine Learning: A Probabilistic Perspective</i>, MIT Press</li>
+  <li>Ian Goodfellow, Yoshua Bengio and Aaron Courville, <i>Deep Learning</i>, MIT Press, 2016 (<a href="https://www.deeplearningbook.org/">online edition</a>)</li>
+</ul>
+<p class="small muted" style="margin-top:14px">Preparation material, to refresh the prerequisites before the course begins:</p>
+<ul class="refs">
+  <li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, chapters 1 to 4</li>
+  <li><a href="https://machinelearningmastery.com/linear-algebra-machine-learning/">Linear Algebra for Machine Learning</a></li>
+  <li><a href="https://www.khanacademy.org/math/statistics-probability">Khan Academy: Statistics and Probability</a></li>
+</ul>
+<p class="small muted" style="margin-top:14px">Other courses:</p>
+<ul class="refs">
+  <li><a href="https://www.youtube.com/watch?v=r4sgKrRL2Ys&amp;list=PL1xHD4vteKYVpaIiy295pg6_SY5qznc77">NPTEL Machine Learning</a>, Balaraman Ravindran</li>
+  <li><a href="http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml">CMU Machine Learning</a>, Tom Mitchell and Maria-Florina Balcan</li>
+  <li><a href="https://www.coursera.org/learn/machine-learning">Coursera Machine Learning</a>, Andrew Ng</li>
+  <li><a href="https://course.fast.ai/ml">fast.ai Machine Learning</a> and <a href="https://course.fast.ai/index.html">Practical Deep Learning for Coders</a></li>
+  <li><a href="http://sli.ics.uci.edu/Classes/2015W-273a">UCI Machine Learning</a>, Alex Ihler</li>
+</ul>
+</section>
+</div>
 
-::: {.callout-tip}
-## Pre-requisite exam
-
-The [pre-requisite exam](exams/prereq.qmd) has to be submitted by 6th January 2024, 9 PM. Details on how to submit the exam are given in the exam itself. The exam is open book and open internet.
-:::
-
-
-### Pre-requisites:
-
-*   Good experience in Python programming
-*   Probability
-*   Linear Algebra
-
-Course preparation: Students are encouraged to study some of the following to refresh their understanding of some of the prerequisities before the course formally begins.  
-
-*  First four chapters of the [Python Data Science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
-*   [Some material on Linear Algebra](https://machinelearningmastery.com/linear-algebra-machine-learning/)
-*   [Khan academy course on Stats and Probability](https://www.khanacademy.org/math/statistics-probability)
-
-
-
-### Reference textbooks:
-
-1.  Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani. [An Introduction to Statistical Learning with Applications in R](http://www-bcf.usc.edu/~gareth/ISL/)
-2.  Christopher Bishop. Pattern Recognition and Machine Learning. Springer, 2006.[\[Freely available online\]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)
-3.  Friedman J, Hastie T, Tibshirani R. The elements of statistical learning. New York, NY, USA:: Springer series in statistics; 2001.[\[Freely available online\]](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
-4.  Duda RO, Hart PE, Stork DG. Pattern classification. John Wiley & Sons; 2012 Nov 9.
-5.  Mitchell TM. Machine learning. 1997. Burr Ridge, IL: McGraw Hill. 1997;45(37):870-7.
-6.  Murphy, K. Machine Learning: A Probabilistic Perspective. MIT Press
-7.  Goodfellow I, Bengio Y, Courville A, Bengio Y. Deep learning. Cambridge: MIT press; 2016 Nov 18.[\[Freely available online\]](https://www.deeplearningbook.org/)
-
-
-
-### Some other ML courses
-
-1.  [NPTEL course by Balaram Ravindran](https://www.youtube.com/watch?v=r4sgKrRL2Ys&list=PL1xHD4vteKYVpaIiy295pg6_SY5qznc77)
-2.  [CMU course by Tom Mitchell and Maria-Florina Balcan](http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml)
-3.  [Coursera ML course by Andrew Ng](https://www.coursera.org/learn/machine-learning)
-4.  [FAST.ai course on ML](https://course.fast.ai/ml)
-5.  [Practical deep learning for coders by FAST.ai](https://course.fast.ai/index.html)
-6.  [Course by Alex Ihler, UCI](http://sli.ics.uci.edu/Classes/2015W-273a)
-
+<section class="rule-top" id="people"><h2>Teaching assistants</h2>
+<ul class="people">
+  <li>Rishiraj Adhikary<span class="muted">rishiraj.a@iitgn.ac.in</span></li>
+  <li>Inderjeet Bhullar<span class="muted">inderjeet.bhullar@iitgn.ac.in</span></li>
+  <li>Rahul Chembakasseril<span class="muted">rahul.chembakasseril@iitgn.ac.in</span></li>
+  <li>R Yeeshu Dhurandhar<span class="muted">r.yeeshu@iitgn.ac.in</span></li>
+  <li>Suraj Jaiswal<span class="muted">jaiswalsuraj@iitgn.ac.in</span></li>
+  <li>Kalash Kankaria<span class="muted">kalash.kankaria@iitgn.ac.in</span></li>
+  <li>Sukruta Midigeshi<span class="muted">sukruta.midigeshi@iitgn.ac.in</span></li>
+  <li>Chirag Sarda<span class="muted">chirag.sarda@iitgn.ac.in</span></li>
+  <li>Ayush Shrivastava<span class="muted">shrivastavaayush@iitgn.ac.in</span></li>
+  <li>Sai Krishna<span class="muted">avulasaikrishna@iitgn.ac.in</span></li>
+</ul>
+</section>
+```

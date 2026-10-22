@@ -1,0 +1,24 @@
+<!-- Course dates, shared by Assessment. Write dates as "08 Oct 25" or "08 Oct 25, 6:30 pm" (IST);
+     the page greys out past rows and draws the Today line from the date in the browser. -->
+
+::: {.dates}
+
+| Date | Event |
+|---|---|
+| 30 Dec 23 | [Prerequisite test released](exams/prereq.qmd) |
+| 03 Jan 24 | First lecture |
+| 06 Jan 24, 9:00 pm | [Prerequisite test due](exams/prereq.qmd) |
+| 24 Jan 24 | Assignment 1 due (tentative) |
+| 02 Feb 24 | **Quiz 1** |
+| 14 Feb 24 | Mock quiz |
+| 26 Feb 24 | Mid-semester exam discussion |
+| 01 Mar 24 | Assignment 2 due, Assignment 3 released (tentative) |
+| 11 Mar 24 | Mock quiz |
+| 15 Mar 24 | **Quiz 3** (tentative) |
+| 21 Mar 24 | Assignment 3 due, Assignment 4 released (tentative) |
+| 15 Apr 24 | Assignment 4 due (tentative) |
+| 19 Apr 24 | Last lecture: overall revision |
+
+:::
+
+Dates marked tentative are from the tentative deadlines announced at the start of the semester. Assignment 2 was to be released in early February. Quiz 2 was scheduled in the mid-semester exam slot (19–23 February, per the academic calendar) and Quiz 4 in the end-semester exam slot.

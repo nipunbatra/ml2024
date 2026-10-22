@@ -3,36 +3,23 @@ project:
   output-dir: docs
 
 website:
-  title: "ES335"
-  favicon: images/logo.jpeg
-  navbar:
-    logo: images/logo.jpeg
-    right:
-      - href: index.qmd
-        text: Home
-      - href: grading.qmd
-        text: Grading Policy
-      - href: faq.qmd
-        text: FAQs
-      - href: schedule.qmd
-        text: Lectures (+Recordings)
-      - href: tentative.qmd
-        text: Tentative deadlines
-      - href: https://nipunbatra.github.io
-        text: Instructor Homepage
-
+  title: "ES 335 · Machine Learning"
+  favicon: favicon.svg
+  description: "Machine Learning at IIT Gandhinagar"
+  site-url: https://nipunbatra.github.io/ml2024/
+  search: false
 
 format:
   html:
-    theme:
-      light: [litera, styles.scss]
-      dark: [darkly, styles-dark.scss]
-    highlight-style: a11y-dark
-    mainfont: "Roboto"
-    code-copy: true
-    code-overflow: wrap
-
+    theme: [cosmo, styles.scss, course.scss]
+    toc: false
+    page-layout: article
+    anchor-sections: false
+    body-classes: dl
+    link-external-newwindow: true
+    include-in-header: course-theme.html
+    include-before-body: rail.html
+    include-after-body: course-tools.html
 
 execute:
   freeze: auto
-

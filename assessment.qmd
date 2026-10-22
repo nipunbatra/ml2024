@@ -1,0 +1,86 @@
+---
+title: "Assessment"
+body-classes: dl wide
+---
+
+```{=html}
+<p class="lede">Grading and every dated event of the 2024 offering in one place. All times are IST. Quizzes are closed book; each assignment is followed by a viva.</p>
+```
+
+::: {.two .rule-top}
+
+## Dates {#deadlines}
+
+{{< include _dates.qmd >}}
+
+## Grading {#grading}
+
+Everything is out of **100%**.
+
+```{=html}
+<table class="t" data-quarto-disable-processing="true">
+<thead><tr><th>Component</th><th>Weight</th><th>How</th></tr></thead>
+<tbody>
+<tr><th>Quizzes</th><td class="big">48%</td><td>Four closed-book quizzes, 16% each; your <strong>best three</strong> count. Two are held in the mid-semester and end-semester exam slots. If you miss a quiz for any reason, there is no makeup.</td></tr>
+<tr><th>Assignments</th><td class="big">44%</td><td>Four or five group assignments of varying weight (for example 10% or 12%), each with at least one project-like question and each followed by a viva. Some involve making pull requests to public repositories or building Hugging Face Spaces–style demos.</td></tr>
+<tr><th>Attendance</th><td class="big">8%</td><td>Based on the number of absences; see below.</td></tr>
+<tr><th>Total</th><td class="big">100%</td><td></td></tr>
+</tbody></table>
+```
+
+### Assignment marks {#assignment-marks}
+
+Assignments are done in groups of six (preferred) or seven, and all members get the same grade. In the viva, the TAs first check that the code matches the submission (any change is not allowed and earns a warning), run it and ask questions: about 75% on the assignment itself and about 25% on the theory behind it.
+
+```{=html}
+<table class="t att" style="max-width:340px" data-quarto-disable-processing="true">
+<thead><tr><th>Part</th><th>Share</th></tr></thead>
+<tbody><tr><td>Code runs correctly</td><td>50%</td></tr><tr><td>Understanding</td><td>25%</td></tr><tr><td>Code quality</td><td>12.5%</td></tr><tr><td>Theory</td><td>12.5%</td></tr></tbody></table>
+```
+
+There are no extensions for assignments, and they must be written in Python.
+
+### Attendance {#attendance}
+
+```{=html}
+<table class="t att" data-quarto-disable-processing="true">
+<thead><tr><th>Absences</th><th>Marks</th></tr></thead>
+<tbody><tr><td>≤ 3</td><td>8%</td></tr><tr><td>4–5</td><td>7%</td></tr><tr><td>6–7</td><td>6%</td></tr><tr><td>8–9</td><td>4%</td></tr><tr><td>10–11</td><td>2%</td></tr><tr><td>≥ 12</td><td>0%</td></tr></tbody></table>
+```
+
+:::
+
+::: {.two .rule-top}
+
+## Quizzes {#quizzes}
+
+```{=html}
+<table class="t" data-quarto-disable-processing="true">
+<thead><tr><th>Quiz</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>Prerequisite test</td><td><a href="exams/prereq.html">Due 06 Jan, 9 pm</a></td></tr>
+<tr><td>1</td><td>02 Feb</td></tr>
+<tr><td>2</td><td>Mid-semester exam slot</td></tr>
+<tr><td>3</td><td>15 Mar (tentative)</td></tr>
+<tr><td>4</td><td>End-semester exam slot</td></tr>
+</tbody></table>
+```
+
+Quizzes may contain both multiple-choice and written questions. Answer sheets should be returned within four to five working days. Mock quizzes were held in class on 14 February and 11 March.
+
+## Assignments {#assignments}
+
+```{=html}
+<table class="t" data-quarto-disable-processing="true">
+<thead><tr><th>Assignment</th><th>Released</th><th>Due</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td>24 Jan</td></tr>
+<tr><td>2</td><td>Early Feb</td><td>01 Mar</td></tr>
+<tr><td>3</td><td>01 Mar</td><td>21 Mar</td></tr>
+<tr><td>4</td><td>21 Mar</td><td>15 Apr</td></tr>
+</tbody></table>
+```
+
+These are the tentative dates announced at the start of the semester. Questions about an assignment go to the #assignments channel on Slack; if there is no response within two days, write to the instructor.
+
+:::
